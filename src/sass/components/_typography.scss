@@ -51,7 +51,7 @@ p {
  */
 
 .text-muted {
-	color: $color-gray-dark;
+	color: $dark-grey;
 }
 
 
@@ -188,7 +188,7 @@ h4,
 hr {
 	margin: calc-em(32px) auto;
 	border: 0;
-	border-top: calc-em(1px) solid $color-gray-light;
+	border-top: calc-em(1px) solid $light-grey;
 	border-bottom: 0 solid $color-white;
 }
 
@@ -236,7 +236,7 @@ sub {
  */
 
 blockquote {
-	border-left: calc-em(4px) solid $color-gray-light;
+	border-left: calc-em(4px) solid $light-grey;
 	margin-bottom: $spacing;
 	padding-left: $spacing;
 	padding-right: $spacing;
