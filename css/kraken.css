@@ -8,7 +8,7 @@
  * Mobile screen resizing
  * @link http://dev.w3.org/csswg/css-device-adapt/
  */
-@import url(http://fonts.googleapis.com/css?family=Muli);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,700,300);
 @-webkit-viewport {
   width: device-width;
   zoom: 1.0; }
@@ -43,7 +43,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "Muli", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline; }
@@ -256,7 +256,7 @@ a:active {
  * Sets font styles for entire site
  */
 body {
-  font-family: "Muli", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #272727;
@@ -821,9 +821,19 @@ select:focus {
     page-break-inside: avoid; } }
 /**
  * @custom
- * Custom styles
+ * Custom styles 
+ * --
+ * AK
+ * -- 
  */
+body {
+  background-color: #808080;
+  color: #e5e5e5; }
+
 h1 {
-  font-weight: bold; }
+  font-size: 4em;
+  font-weight: 100; }
+  h1.hero {
+    text-align: center; }
 
 /*# sourceMappingURL=kraken.css.map */
