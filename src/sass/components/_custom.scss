@@ -13,10 +13,12 @@ body{
 }
 
  h1{
- 	font-size: 4em;
+ 	font-size: 4vw;
  	font-weight: 100;
  	&.hero{
  		text-align: center;
- 	}
+ 		@media (max-width: $bp-large)  { font-size: calc-em(36px); }
+
+  	}
  }
 
