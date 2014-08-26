@@ -1,0 +1,107 @@
+/**
+ * @section Alignment, Spacing, & Visibility
+ * Override defaults.
+ */
+
+/**
+ * Text alignment
+ */
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+
+/**
+ * Floats
+ */
+
+.float-left {
+	float: left;
+}
+
+.float-center {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.float-right {
+	float: right;
+}
+
+
+/**
+ * Spacing
+ */
+
+.no-space {
+	margin: 0;
+	padding: 0;
+}
+
+.no-space-bottom {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.no-space-top {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.space-bottom {
+	margin-bottom: calc-em(32px);
+}
+
+.space-bottom-small {
+	margin-bottom: calc-em(8px);
+	padding-bottom: 0;
+}
+
+.space-top {
+	padding-top: calc-em(13px);
+}
+
+
+/**
+ * Visibility
+ */
+
+.screen-reader {
+	position: absolute;
+	top: -9999em;
+	left:-9999em;
+}
+
+/**
+ * @workaround
+ * @affected IE 8/9/10
+ */
+[hidden] {
+	display: none;
+	visibility: hidden;
+}
+
+
+/**
+ * Clearfix
+ */
+
+.group:before,
+.group:after {
+	display: table;
+	content: "";
+}
+
+.group:after {
+	clear: both;
+}
