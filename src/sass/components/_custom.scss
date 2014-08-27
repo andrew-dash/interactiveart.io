@@ -13,6 +13,8 @@ body{
 	color: $light-grey;
 }
 
+intro{}
+
  h1{
  	font-size: 4vw;
  	font-weight: 100;
@@ -30,4 +32,20 @@ nav{
 
 span{
 	color: $color-primary;
+}
+
+h2{
+	&.bq{
+		text-align: center;
+		font-style: italic;
+		font-weight: 300;
+	}
+	&.next{
+		border-bottom: 1px solid $color-white;
+	}
+}
+
+.link{
+	text-align: center;
+	list-style-type: none;
 }

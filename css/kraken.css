@@ -261,7 +261,8 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #272727;
-  background: #ffffff; }
+  background: #ffffff;
+  font-weight: 100; }
   @media (min-width: 40em) {
     body {
       line-height: 1.5625; } }
@@ -289,7 +290,7 @@ p {
  * Alternate text colors
  */
 .text-muted {
-  color: #808080; }
+  color: rgba(229, 229, 229, 0.5); }
 
 /**
  * Hyperlink styling
@@ -361,7 +362,7 @@ dt {
  */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
-  font-weight: normal;
+  font-weight: 100;
   margin-bottom: 1em;
   padding-top: 1em;
   word-wrap: break-word; }
@@ -1019,5 +1020,16 @@ nav {
 
 span {
   color: #99FF99; }
+
+h2.bq {
+  text-align: center;
+  font-style: italic;
+  font-weight: 300; }
+h2.next {
+  border-bottom: 1px solid #ffffff; }
+
+.link {
+  text-align: center;
+  list-style-type: none; }
 
 /*# sourceMappingURL=kraken.css.map */
