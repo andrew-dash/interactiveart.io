@@ -1,0 +1,15 @@
+.bg {
+	background-color: lighten( $light-grey, 7% );
+	padding-top: calc-em(24px);
+	padding-bottom: calc-em(24px);
+}
+
+.bg-secondary {
+	color: $color-white;
+	background-color: $color-primary;
+}
+
+.bg-condensed {
+	padding-top: calc-em(15px);
+	padding-bottom: calc-em(15px);
+}
