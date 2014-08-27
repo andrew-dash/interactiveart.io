@@ -9,6 +9,7 @@
  * @link http://dev.w3.org/csswg/css-device-adapt/
  */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,700,300);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400);
 @-webkit-viewport {
   width: device-width;
   zoom: 1.0; }
@@ -303,7 +304,7 @@ a:hover,
 a:focus,
 a:active {
   color: #4dff4d;
-  text-decoration: underline; }
+  text-decoration: none; }
 
 a img {
   border: none;
@@ -819,6 +820,179 @@ select:focus {
   tr,
   img {
     page-break-inside: avoid; } }
+/*  Center all navigation elements */
+.nav-wrap {
+  text-align: center; }
+
+/*  For text-based logo, override default link styling.
+ *  If .logo and .nav don't align properly,
+ *  adjust the .logo line-height. */
+.logo {
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 1.2;
+  color: #272727;
+  margin-bottom: 0.5em;
+  text-decoration: none; }
+
+/*  For text-based logo, override default link hover styling */
+.logo:hover {
+  color: #272727;
+  text-decoration: none; }
+
+/*  Remove default list styling for navigation list */
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/*  Display navigation items as inline-block elements.
+ *  Add slight margin between each navigation item. */
+.nav > li {
+  display: inline-block;
+  float: none;
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
+
+/*  Remove margin-left on first navigation item */
+.nav > li:first-child {
+  margin-left: 0; }
+
+/*  Remove margin-right on last navigation item */
+.nav > li:last-child {
+  margin-right: 0; }
+
+/*  Placeholder for active link styling */
+/*  .nav > li.active > a { */
+/*      Add your styles here */
+/*  } */
+/*  Hide the navigation toggle menu button by default.
+ *  Only needed for expand-and-collapse option. */
+.nav-toggle {
+  display: none;
+  visibility: hidden; }
+
+/*  Expand-and-Collapse styling for smaller screens.
+ *  Remove if not using.
+ *  Change max-width to fit your project. */
+@media (max-width: 40em) {
+  /*  .js-astro prefix ensure content is only hidden when JavaScript is supported.
+   *  This requires on the included js-accessibility.js-astro script. */
+  /*  Display navigation toggle button if javascript is supported */
+  .js-astro .nav-toggle {
+    display: block;
+    visibility: visible; }
+
+  /*  Hide navigation items if javascript is supported */
+  .js-astro .nav-collapse {
+    overflow: hidden;
+    /*  CSS3 animation for when menu content expands */
+    transition: all 0.35s ease-in; }
+    .js-astro .nav-collapse span {
+      display: none; }
+
+  /*  When collapsed element has the .active class, show it
+   *  Uses max-height instead of display: none to allow for
+   *  CSS3 animations, which don't work on display values. */
+  .js-astro .nav-collapse.active {
+    max-height: 999em; }
+
+  /*  Display navigation items as full-width, stacked blocks when javascript supported */
+  .js-astro .nav-collapse li {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    box-sizing: border-box; } }
+.bg {
+  background-color: #f7f7f7;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
+
+.bg-secondary {
+  color: #ffffff;
+  background-color: #99FF99; }
+
+.bg-condensed {
+  padding-top: 0.9375em;
+  padding-bottom: 0.9375em; }
+
+/*  Hide tab navigation by default */
+.tabs {
+  display: none;
+  visibility: hidden; }
+
+/*  Display tab navigation if javascript enabled.
+ *  This requires on the included js-accessibility.js-tabby script. */
+.js-tabby .tabs {
+  display: block;
+  visibility: visible; }
+
+/*  Force browser to show a pointer on tab navigation. */
+.tabs a,
+.tabs button {
+  cursor: pointer; }
+
+/*  Hide tab content if javascript is enabled. */
+.js-tabby .tabs-pane {
+  display: none;
+  visibility: hidden; }
+
+/*  Show tab content when active class is added.
+ *  This class is added via javascript. */
+.tabs-pane.active {
+  display: block;
+  visibility: visible; }
+
+/* Clearfix */
+.tabs:before,
+.tabs:after {
+  display: table;
+  content: ""; }
+
+.tabs:after {
+  clear: both; }
+
+/*  Hide the collapse and expand link or button by default */
+.collapse-toggle {
+  display: none;
+  visibility: hidden; }
+
+/*  If JavaScript is enabled, show the collapse and expand link or button */
+.js-houdini .collapse-toggle {
+  display: inline;
+  visibility: visible;
+  cursor: pointer; }
+
+/*  When expanded, hide "show" text.
+ *  When collapsed, hide "hide" text. */
+.active .collapse-text-show,
+.collapse-text-hide {
+  display: none;
+  visibility: hidden; }
+
+/*  When expanded, show "hide" text. */
+.active .collapse-text-hide {
+  display: inline;
+  visibility: visible; }
+
+/* If JavaScript is enabled, hide the collapsed element */
+.js-houdini .collapse {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  /*  Add animation when content expands and collapses */
+  transition: opacity 0.35s ease; }
+
+/*  When collapsed element has the .active class, show it
+ *  Uses max-height instead of display: none to allow for
+ *  CSS3 animations, which don't work on display values. */
+.js-houdini .collapse.active {
+  max-height: 9999em;
+  opacity: 1; }
+
 /**
  * @custom
  * Custom styles 
@@ -838,5 +1012,12 @@ h1 {
     @media (max-width: 60em) {
       h1.hero {
         font-size: 2.25em; } }
+
+nav {
+  font-family: "Lato", sans-serif;
+  font-weight: 100; }
+
+span {
+  color: #99FF99; }
 
 /*# sourceMappingURL=kraken.css.map */

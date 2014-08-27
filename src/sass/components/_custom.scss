@@ -7,6 +7,7 @@
  */
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,700,300);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400);
 body{
 	background-color: $dark-grey;
 	color: $light-grey;
@@ -22,3 +23,11 @@ body{
   	}
  }
 
+nav{
+	font-family: $font-secondary;
+	font-weight: 100;
+}
+
+span{
+	color: $color-primary;
+}
