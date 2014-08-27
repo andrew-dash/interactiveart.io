@@ -49,3 +49,19 @@ h2{
 	text-align: center;
 	list-style-type: none;
 }
+
+.links a{
+	padding: 0 1em 1em 0;
+	color: $color-white;
+	&:hover{
+		color: $color-primary;
+	}
+}
+
+h3{
+	font-weight: 300;
+}
+
+.main{
+	margin-bottom: 200px;
+}

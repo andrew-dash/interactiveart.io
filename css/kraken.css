@@ -1032,4 +1032,16 @@ h2.next {
   text-align: center;
   list-style-type: none; }
 
+.links a {
+  padding: 0 1em 1em 0;
+  color: #ffffff; }
+  .links a:hover {
+    color: #99FF99; }
+
+h3 {
+  font-weight: 300; }
+
+.main {
+  margin-bottom: 200px; }
+
 /*# sourceMappingURL=kraken.css.map */
