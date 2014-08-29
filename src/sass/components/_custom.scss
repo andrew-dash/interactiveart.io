@@ -7,7 +7,7 @@
  */
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,700,300);
-@import url(http://fonts.googleapis.com/css?family=Lato:100,400);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,700italic);
 body{
 	background-color: $dark-grey;
 	color: $light-grey;
@@ -54,7 +54,22 @@ h2{
 	padding: 0 1em 1em 0;
 	color: $color-white;
 	&:hover{
-		color: $color-primary;
+		color: rgba($light-grey, 0.8);
+	}
+	&.tooltip:hover span{
+		display: inline;
+		position: absolute;
+	}
+	&.tooltip span{
+		z-index: 10;
+		color: $light-pink;
+		font-style: italic;
+		font-size: 0.9em;
+		vertical-align: baseline;
+		display: none;
+		background: rgba($dark-grey, 0.9);
+		margin-left: 1em;
+		padding-right: 400px;
 	}
 }
 
@@ -65,3 +80,4 @@ h3{
 .main{
 	margin-bottom: 200px;
 }
+
