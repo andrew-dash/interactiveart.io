@@ -9,7 +9,7 @@
  * @link http://dev.w3.org/csswg/css-device-adapt/
  */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,700,300);
-@import url(http://fonts.googleapis.com/css?family=Lato:100,400);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,700italic);
 @-webkit-viewport {
   width: device-width;
   zoom: 1.0; }
@@ -1036,7 +1036,20 @@ h2.next {
   padding: 0 1em 1em 0;
   color: #ffffff; }
   .links a:hover {
-    color: #99FF99; }
+    color: rgba(229, 229, 229, 0.8); }
+  .links a.tooltip:hover span {
+    display: inline;
+    position: absolute; }
+  .links a.tooltip span {
+    z-index: 10;
+    color: #FF99CC;
+    font-style: italic;
+    font-size: 0.9em;
+    vertical-align: baseline;
+    display: none;
+    background: rgba(128, 128, 128, 0.9);
+    margin-left: 1em;
+    padding-right: 400px; }
 
 h3 {
   font-weight: 300; }
