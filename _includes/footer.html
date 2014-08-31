@@ -1,0 +1,29 @@
+<!-- Javascript -->
+		<!-- In the footer for better performance -->
+		<script src="js/main.js"></script>
+		<script src="js/classList.js"></script>
+		<script src="js/bind-polyfill.js"></script>
+		<script src="js/astro-plus.js"></script>
+
+		<script>
+		astro.init({
+			toggleActiveClass: 'active',
+			navActiveClass: 'active',
+			initClass: 'js-astro',
+			callbackBefore: function () {},
+			callbackAfter: function () {}
+		});
+	</script>
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) -->
+		<script>
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','UA-XXXXX-X');ga('send','pageview');
+		</script>
+
+	</body>
+</html>
