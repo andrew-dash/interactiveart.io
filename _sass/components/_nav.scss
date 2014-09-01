@@ -1,0 +1,20 @@
+/* 
+ * NAV BAR
+ *
+ */
+.nav-bar {
+	position: fixed;
+	width: 100%;
+	color: #fff;
+	height: 80px;
+	top: 0px;
+	left: 0px;
+	z-index: 2000;
+	padding: 20px;
+	opacity: 0;
+	@include transition(opacity, 0.2s, ease-in-out);
+	&.scrolled {
+		background-color: $dark-grey;
+		opacity: 0.9
+	}
+}

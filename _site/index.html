@@ -18,7 +18,7 @@
 		<!-- https://github.com/audreyr/favicon-cheat-sheet -->
 
 		<!-- Feature Test -->
-		<script src="http://interactiveart.io//js/detects.min.js"></script>
+		<script src="http://0.0.0.0:4000/js/detects.min.js"></script>
 
 		<!-- HTML5 Shim for IE 6-8 -->
 		<!--[if lt IE 9]>
@@ -26,7 +26,7 @@
 		<![endif]-->
 
 		<!-- stylesheet -->
-		<link rel="stylesheet" href="http://interactiveart.io//css/kraken.css" type="text/css">
+		<link rel="stylesheet" href="http://0.0.0.0:4000/css/kraken.css" type="text/css">
 
 	</head>
 
@@ -43,6 +43,21 @@
 <section class="container intro">
 
 	<h1 class="hero">Interactive Art & Creative Coding</h1>
+
+	<div class="nav-bar">
+		<h2>Interactive Art & Creative Coding</h2>
+
+		<!-- <nav class="nav-wrap">
+			<div class="nav-collapse" id="nav-menu">
+				<ul class="nav">
+					<li><a href="#schedule">schedule</a></li>
+					<li><a href="#links">links</a></li>
+					<li><a href="#pdfs">PDFs</a></li>
+					<li><a href="#resources">resources</a></li>
+				</ul>
+			</div>
+		</nav> -->
+	</div>
 
 	<nav class="nav-wrap">
 		<div class="nav-collapse" id="nav-menu">
@@ -63,17 +78,6 @@
 			</ul>
 		</div>
 	</nav>
-
-	<!-- <nav class="nav-wrap">
-		<div class="nav-collapse" id="nav-menu">
-			<ul class="nav">
-				<li><a href="#schedule">schedule</a></li>
-				<li><a href="#links">links</a></li>
-				<li><a href="#pdfs">PDFs</a></li>
-				<li><a href="#resources">resources</a></li>
-			</ul>
-		</div>
-	</nav> -->
 
 </section>
 
@@ -179,21 +183,21 @@
 </section>
 
 <!-- Javascript -->
-		<!-- In the footer for better performance -->
-		<script src="http://interactiveart.io//js/main.js"></script>
-		<script src="http://interactiveart.io//js/classList.js"></script>
-		<script src="http://interactiveart.io//js/bind-polyfill.js"></script>
-		<script src="http://interactiveart.io//js/astro-plus.js"></script>
+		<script src="http://0.0.0.0:4000/js/jquery-2.1.1.min.js"></script>
+		<script src="http://0.0.0.0:4000/js/main.js"></script>
+		<script src="http://0.0.0.0:4000/js/classList.js"></script>
+		<script src="http://0.0.0.0:4000/js/bind-polyfill.js"></script>
+		<script src="http://0.0.0.0:4000/js/astro-plus.js"></script>
 
 		<script>
-		astro.init({
-			toggleActiveClass: 'active',
-			navActiveClass: 'active',
-			initClass: 'js-astro',
-			callbackBefore: function () {},
-			callbackAfter: function () {}
-		});
-	</script>
+			astro.init({
+				toggleActiveClass: 'active',
+				navActiveClass: 'active',
+				initClass: 'js-astro',
+				callbackBefore: function () {},
+				callbackAfter: function () {}
+			});
+		</script>
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) -->
 		<script>
