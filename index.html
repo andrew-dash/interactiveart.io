@@ -1,0 +1,24 @@
+---
+layout: main
+title: interactiveart.io
+---
+
+<section class="container main">
+
+	<div class="row">
+		<!-- <div class="grid-full">
+			<h2 class="bq text-muted">just a touch of code</h2>
+		</div> -->
+		{% for post in site.posts reversed %}
+
+		<section class="container">
+			<div class="grid-two-thirds float-center">
+				<h2 class="next">{{ post.name }}</h2>
+					{{ post.content }}
+			</div>
+		</section>
+
+		{% endfor %}
+	</div>
+
+</section>
