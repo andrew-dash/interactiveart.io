@@ -2,3 +2,11 @@ name: "interactiveart.io"
 description: "course site for interactive art & creative coding"
 
 url: "http://interactiveart.io/"
+
+collections:
+  ofbook:
+    output: true
+    permalink: /ofBook/:path/
+
+post_defaults:
+  layout: post
