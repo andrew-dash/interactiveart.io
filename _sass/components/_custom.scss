@@ -21,7 +21,9 @@ intro{}
  	&.hero{
  		text-align: center;
  		@media (max-width: $bp-large)  { font-size: calc-em(36px); }
-
+ 		&.shrink{
+ 			font-size: 1vw;
+ 		}
   	}
  }
 
@@ -79,5 +81,8 @@ h3{
 
 .main{
 	margin-bottom: 200px;
+	&.shrink{
+		color: $color-primary;
+	}
 }
 

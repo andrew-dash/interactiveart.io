@@ -1,7 +1,7 @@
 name: "interactiveart.io"
 description: "course site for interactive art & creative coding"
 
-url: "http://interactiveart.io/"
+url: "http://interactiveart.io"
 
 collections:
   ofbook:
@@ -10,3 +10,6 @@ collections:
 
 post_defaults:
   layout: post
+
+sass:
+    sass_dir: _sass
