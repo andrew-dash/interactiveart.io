@@ -1,19 +1,19 @@
 <!-- Javascript -->
-		<!-- In the footer for better performance -->
+		<script src="{{ site.url }}/js/jquery-2.1.1.min.js"></script>
 		<script src="{{ site.url }}/js/main.js"></script>
 		<script src="{{ site.url }}/js/classList.js"></script>
 		<script src="{{ site.url }}/js/bind-polyfill.js"></script>
 		<script src="{{ site.url }}/js/astro-plus.js"></script>
 
 		<script>
-		astro.init({
-			toggleActiveClass: 'active',
-			navActiveClass: 'active',
-			initClass: 'js-astro',
-			callbackBefore: function () {},
-			callbackAfter: function () {}
-		});
-	</script>
+			astro.init({
+				toggleActiveClass: 'active',
+				navActiveClass: 'active',
+				initClass: 'js-astro',
+				callbackBefore: function () {},
+				callbackAfter: function () {}
+			});
+		</script>
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) -->
 		<script>
