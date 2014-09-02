@@ -232,8 +232,13 @@ float position;
 		<script src="http://0.0.0.0:4000/js/classList.js"></script>
 		<script src="http://0.0.0.0:4000/js/bind-polyfill.js"></script>
 		<script src="http://0.0.0.0:4000/js/astro-plus.js"></script>
+		<script src="http://0.0.0.0:4000/js/smooth-scroll.js"></script>
 
 		<script>
+			smoothScroll.init({
+				offset: 80
+			});
+	
 			astro.init({
 				toggleActiveClass: 'active',
 				navActiveClass: 'active',

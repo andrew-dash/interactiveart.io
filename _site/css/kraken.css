@@ -297,14 +297,14 @@ p {
  */
 a,
 a:visited {
-  color: #99FF99;
+  color: #ffffff;
   text-decoration: none;
   word-wrap: break-word; }
 
 a:hover,
 a:focus,
 a:active {
-  color: #4dff4d;
+  color: #e0e0e0;
   text-decoration: none; }
 
 a img {
@@ -463,15 +463,18 @@ pre {
   border-radius: 0.0725em; }
 
 code {
-  color: #dd1144;
-  background-color: #f7f7f7;
+  color: #FF99CC;
+  background-color: #555555;
   padding: 0.25em; }
 
 pre {
   display: block;
   margin-bottom: 1.5625em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
   line-height: 1.5;
-  background-color: #f4f4f4;
+  background-color: #555555;
   padding: 0.8125em;
   tab-size: 4;
   white-space: pre-wrap;
@@ -480,7 +483,7 @@ pre {
 pre code {
   font-size: 1em;
   padding: 0;
-  color: inherit;
+  color: #FF99CC;
   background-color: transparent;
   border: 0; }
 
@@ -907,6 +910,132 @@ select:focus {
     padding-top: 0.25em;
     padding-bottom: 0.25em;
     box-sizing: border-box; } }
+/*  Center all navigation elements */
+.nav-wrap {
+  text-align: center; }
+
+/*  For text-based logo, override default link styling.
+ *  If .logo and .nav don't align properly,
+ *  adjust the .logo line-height. */
+.logo {
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 1.2;
+  color: #272727;
+  margin-bottom: 0.5em;
+  text-decoration: none; }
+
+/*  For text-based logo, override default link hover styling */
+.logo:hover {
+  color: #272727;
+  text-decoration: none; }
+
+/*  Remove default list styling for navigation list */
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/*  Display navigation items as inline-block elements.
+ *  Add slight margin between each navigation item. */
+.nav > li {
+  display: inline-block;
+  float: none;
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
+
+/*  Remove margin-left on first navigation item */
+.nav > li:first-child {
+  margin-left: 0; }
+
+/*  Remove margin-right on last navigation item */
+.nav > li:last-child {
+  margin-right: 0; }
+
+/*  Placeholder for active link styling */
+/*  .nav > li.active > a { */
+/*      Add your styles here */
+/*  } */
+/*  Hide the navigation toggle menu button by default.
+ *  Only needed for expand-and-collapse option. */
+.nav-toggle {
+  display: none;
+  visibility: hidden; }
+
+/*  Expand-and-Collapse styling for smaller screens.
+ *  Remove if not using.
+ *  Change max-width to fit your project. */
+@media (max-width: 40em) {
+  /*  .js-astro prefix ensure content is only hidden when JavaScript is supported.
+   *  This requires on the included js-accessibility.js-astro script. */
+  /*  Align text to the left when javascript is supported */
+  .js-astro .nav-wrap {
+    text-align: left; }
+
+  /*  Float logo to the left when javascript is supported */
+  .js-astro .logo {
+    float: left; }
+
+  /*  Display navigation toggle button if javascript is supported */
+  .js-astro .nav-toggle {
+    display: block;
+    visibility: visible;
+    float: right; }
+
+  /*  Hide navigation items if javascript is supported */
+  .js-astro .nav-collapse {
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    /*  CSS3 animation for when menu content expands */
+    transition: all 0.35s ease-in; }
+
+  /*  When collapsed element has the .active class, show it
+   *  Uses max-height instead of display: none to allow for
+   *  CSS3 animations, which don't work on display values. */
+  .js-astro .nav-collapse.active {
+    max-height: 999em; }
+
+  .js-astro .nav {
+    text-align: left; }
+
+  /*  Display navigation items as full-width, stacked blocks when javascript supported */
+  .js-astro .nav-collapse li {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    box-sizing: border-box; } }
+/*  Styling for Bigger Screens.
+ *  (Astro is built mobile-first.)
+ *  Change min-width to fit your project. */
+@media (min-width: 40em) {
+  /*  Align text to the left */
+  .nav-wrap {
+    text-align: left; }
+
+  /*  Float logo to the left and remove margin-bottom */
+  .logo {
+    float: left; }
+
+  /*  Align navigation elements to the right */
+  .nav {
+    text-align: center; }
+    .nav.bar {
+      text-align: left; } }
+/*  Clearfix */
+.nav-wrap:before, .nav-wrap:after {
+  display: table;
+  content: "";
+  *zoom: 1; }
+
+.nav-wrap:after {
+  clear: both; }
+
 .bg {
   background-color: #f7f7f7;
   padding-top: 1.5em;
@@ -1016,12 +1145,28 @@ h1 {
     h1.hero.shrink {
       font-size: 1vw; }
 
+a.logo {
+  color: #FF99CC;
+  margin-right: 1em;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out; }
+  a.logo:hover {
+    color: #ffa3d1; }
+
+.bar li a {
+  color: #e5e5e5; }
+  .bar li a:hover {
+    color: #FF99CC; }
+
 nav {
   font-family: "Lato", sans-serif;
   font-weight: 100; }
 
 span {
-  color: #99FF99; }
+  color: #FF99CC; }
 
 h2.bq {
   text-align: center;
@@ -1031,7 +1176,7 @@ h2.next {
   border-bottom: 1px solid #ffffff; }
 
 .link {
-  text-align: center;
+  text-align: left;
   list-style-type: none; }
 
 .links a {

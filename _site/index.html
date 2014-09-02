@@ -42,21 +42,24 @@
 
 <section class="container intro">
 
-	<h1 class="hero">Interactive Art & Creative Coding</h1>
+	<h1 class="hero" id="top">Interactive Art & Creative Coding</h1>
 
 	<div class="nav-bar">
-		<h2>Interactive Art & Creative Coding</h2>
-
-		<!-- <nav class="nav-wrap">
+			<a class="logo" data-scroll href="#top">Interactive Art & Creative Coding</a>
+			<a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">Menu</a>
 			<div class="nav-collapse" id="nav-menu">
-				<ul class="nav">
-					<li><a href="#schedule">schedule</a></li>
-					<li><a href="#links">links</a></li>
-					<li><a href="#pdfs">PDFs</a></li>
-					<li><a href="#resources">resources</a></li>
+				<ul class="nav bar">
+					<li><a data-scroll href="#overview">overview</a></li>
+					<li><a data-scroll href="#links">links</a></li>
+					<li><a data-scroll href="#pdfs">PDFs</a></li>
+					<li><a href="http://0.0.0.0:4000/ofbook/">ofBook</a></li>
+					<li><a data-scroll href="#resources">resources</a></li>
+					<li><a data-scroll href="#artists">artists</a></li>
+					<li><a href="http://0.0.0.0:4000/media/interactive-art-syllabus-fall-14.pdf" target="_blank">syllabus</a></li>
+					<li><a data-scroll href="#1">1</a></li>
+					<li><a data-scroll href="#2">2</a></li>
 				</ul>
 			</div>
-		</nav> -->
 	</div>
 
 	<nav class="nav-wrap">
@@ -68,7 +71,6 @@
 				<li>9/27 - 12/10</li><span>|</span>
 				<li>Maclean 416</li>
 			</ul>
-		</div>
 	</nav>
 
 	<nav class="nav-wrap">
@@ -79,6 +81,19 @@
 		</div>
 	</nav>
 
+	<nav class="nav-wrap">
+		<div class="nav-collapse" id="nav-menu">
+			<ul class="nav">
+				<li><a data-scroll href="#overview">overview</a></li>
+				<li><a data-scroll href="#links">links</a></li>
+				<li><a data-scroll href="#pdfs">PDFs</a></li>
+				<li><a href="http://0.0.0.0:4000/ofbook/">ofBook</a></li>
+				<li><a data-scroll href="#resources">resources</a></li>
+				<li><a data-scroll href="#artists">artists</a></li>
+				<li><a href="http://0.0.0.0:4000/media/interactive-art-syllabus-fall-14.pdf" target="_blank">syllabus</a></li>
+			</ul>
+	</nav>
+<span id="overview"></span>
 </section>
 
 <section class="container main">
@@ -89,7 +104,7 @@
 		</div> -->
 		
 
-		<section class="container">
+		<section class="container" id="overview">
 			<div class="grid-two-thirds float-center">
 				<h2 class="next">overview</h2>
 					<p>This studio course investigates the creative possibilities in programming, from interactivity to information visualization. Students explore interactive narratives and games, software art, simulations and emergent behaviors, and other code-based forms. Lectures, discussions, and demonstrations provide a conceptual, aesthetic and technical foundation in programming as a creative practice. Techniques and concepts are presented through the open-source programming environment OpenFrameworks with an introduction to the Raspberry Pi hardware platform.</p>
@@ -101,7 +116,7 @@
 
 		
 
-		<section class="container">
+		<section class="container" id="1">
 			<div class="grid-two-thirds float-center">
 				<h2 class="next">1</h2>
 					<h3 class="text-muted">videos</h3>
@@ -112,14 +127,14 @@
 	<a href="https://www.youtube.com/watch?v=HQLORg5COiU#t=60" target="_blank" class="tooltip">Dance with Drones<span>Performance by Diato Manabe</span></a>
 </p>
 
-<h3 class="text-muted">resources</h3>
+<h3 class="text-muted" id="resources">resources</h3>
 <p class="links">
 	<a href="https://github.com/openframeworks/ofBook" target="_blank" class="tooltip">ofBook</a>
 	<a href="http://natureofcode.com/" target="_blank" class="tooltip">Nature of Code</a>
 	<a href="http://www.creativeapplications.net/" target="_blank" class="tooltip">creativeapplications.net</a>
 </p>
 
-<h3 class="text-muted">links</h3>
+<h3 class="text-muted" id="links">links</h3>
 <p class="links">
 	<a href="http://www.openframeworks.cc/" target="_blank" class="tooltip">openFrameworks</a>
 	<a href="https://github.com/olab-io/ofSketch" target="_blank" class="tooltip">ofSketch</a>
@@ -136,7 +151,7 @@
 	<a href="http://arduino.cc/" target="_blank" class="tooltip">Arduino</a>
 	<a href="http://www.oculusvr.com/" target="_blank" class="tooltip">Oculus Rift</a>
 </p>
-<h3 class="text-muted">artists</h3>
+<h3 class="text-muted" id="artists">artists</h3>
 <p class="links">
 	<a href="http://www.daito.ws/" target="_blank" class="tooltip">Diato Manabe</a>
 	<a href="http://www.flong.com/" target="_blank" class="tooltip">Golan Levin</a>
@@ -169,7 +184,7 @@
 
 		
 
-		<section class="container">
+		<section class="container" id="2">
 			<div class="grid-two-thirds float-center">
 				<h2 class="next">2</h2>
 					
@@ -188,8 +203,13 @@
 		<script src="http://0.0.0.0:4000/js/classList.js"></script>
 		<script src="http://0.0.0.0:4000/js/bind-polyfill.js"></script>
 		<script src="http://0.0.0.0:4000/js/astro-plus.js"></script>
+		<script src="http://0.0.0.0:4000/js/smooth-scroll.js"></script>
 
 		<script>
+			smoothScroll.init({
+				offset: 80
+			});
+	
 			astro.init({
 				toggleActiveClass: 'active',
 				navActiveClass: 'active',
