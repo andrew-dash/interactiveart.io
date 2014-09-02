@@ -38,7 +38,7 @@ a.logo{
 .bar{
 	li a {
 		color: $light-grey;
-		&:hover{
+		&:hover, &.active{
 			color: $light-pink;
 		}
 	}
