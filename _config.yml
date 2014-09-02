@@ -13,3 +13,5 @@ post_defaults:
 
 sass:
     sass_dir: _sass
+
+highlighter: pygments
