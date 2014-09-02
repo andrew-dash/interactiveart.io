@@ -27,13 +27,30 @@ intro{}
   	}
  }
 
+a.logo{
+	color: $light-pink;
+	margin-right: 1em;
+	@include transition(color, 0.2s, ease-in-out);
+	&:hover{
+		color: lighten($light-pink, 2%);
+	}
+}
+.bar{
+	li a {
+		color: $light-grey;
+		&:hover{
+			color: $light-pink;
+		}
+	}
+}
+
 nav{
 	font-family: $font-secondary;
 	font-weight: 100;
 }
 
 span{
-	color: $color-primary;
+	color: $light-pink;
 }
 
 h2{
@@ -48,7 +65,7 @@ h2{
 }
 
 .link{
-	text-align: center;
+	text-align: left;
 	list-style-type: none;
 }
 
@@ -85,4 +102,3 @@ h3{
 		color: $color-primary;
 	}
 }
-
