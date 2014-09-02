@@ -459,12 +459,13 @@ q:after {
 code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 0.875em;
+  font-size: 0.75em;
+  font-weight: light;
   border-radius: 0.0725em; }
 
 code {
   color: #99FF99;
-  background-color: #555555;
+  background-color: #646464;
   padding: 0.25em; }
 
 pre {
@@ -474,7 +475,7 @@ pre {
   margin-right: auto;
   width: 50em;
   line-height: 1.5;
-  background-color: #555555;
+  background-color: #646464;
   padding: 0.8125em;
   tab-size: 4;
   white-space: pre-wrap;

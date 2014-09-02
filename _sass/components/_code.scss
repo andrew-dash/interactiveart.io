@@ -6,13 +6,14 @@
 code,
 pre {
 	font-family: $font-monospace;
-	font-size: calc-em(14px);
+	font-size: calc-em(12px);
+	font-weight: light;
 	border-radius: calc-em(1px);
 }
 
 code {
 	color: $color-primary;
-	background-color: lighten( $color-black, 18% );
+	background-color: lighten( $color-black, 24% );
 	padding: calc-em(4px);
 }
 
@@ -23,7 +24,7 @@ pre {
 	margin-right: auto;
 	width: 50em;
 	line-height: 1.5;
-	background-color: lighten( $color-black, 18% );
+	background-color: lighten( $color-black, 24% );
 	padding: calc-em(13px);
 	tab-size: 4;
 	white-space: pre-wrap;
