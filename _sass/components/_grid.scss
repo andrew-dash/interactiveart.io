@@ -74,3 +74,9 @@
 .row {
 	@extend .group;
 }
+
+/* OVERRIDE */
+.grid-two-thirds{
+	@media (min-width: $bp-medium)  { width: 100%; }
+	@media (min-width: $bp-large)  { width: 66.66667%; }
+}

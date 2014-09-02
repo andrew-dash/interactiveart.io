@@ -15,6 +15,10 @@
 	@include transition(opacity, 0.2s, ease-in-out);
 	&.scrolled {
 		background-color: $dark-grey;
-		opacity: 0.9
+		opacity: 0.9;
+	}
+	@media (max-width: $bp-large) { 
+		background-color: $dark-grey;
+		opacity: 0.9;
 	}
 }

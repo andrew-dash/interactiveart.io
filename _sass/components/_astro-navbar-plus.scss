@@ -63,7 +63,7 @@
 /*  Expand-and-Collapse styling for smaller screens.
  *  Remove if not using.
  *  Change max-width to fit your project. */
-@media (max-width: $bp-medium) {
+@media (max-width: $bp-large) {
 
 	/*  .js-astro prefix ensure content is only hidden when JavaScript is supported.
 	 *  This requires on the included js-accessibility.js-astro script. */
@@ -124,7 +124,7 @@
 /*  Styling for Bigger Screens.
  *  (Astro is built mobile-first.)
  *  Change min-width to fit your project. */
-@media (min-width: $bp-medium) {
+@media (min-width: $bp-large) {
 
 	/*  Align text to the left */
 	.nav-wrap {

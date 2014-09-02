@@ -3,13 +3,13 @@ var scrollHeader = (function() {
 	var docElem = document.documentElement,
 		header = document.querySelector( '.nav-bar' ),
 		didScroll = false,
-		changeHeaderOn = 160;
+		changeHeaderOn = 180;
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
 			if( !didScroll ) {
 				didScroll = true;
-				setTimeout( scrollPage, 150 );
+				setTimeout( scrollPage, 175 );
 			}
 		}, false );
 	}
@@ -55,8 +55,8 @@ $(window).on('scroll', function () {
   });
 
   nav.find('a').on('click', function () {
-  var $el = $(this)
-    , id = $el.attr('href');
+  var $el = $(this),
+  	  id = $el.attr('href');
  
   $('html, body').animate({
     scrollTop: $(id).offset().top - nav_height

@@ -252,6 +252,14 @@ a:active {
     width: 25%; } }
 
 /* Add clearfix */
+/* OVERRIDE */
+@media (min-width: 40em) {
+  .grid-two-thirds {
+    width: 100%; } }
+@media (min-width: 60em) {
+  .grid-two-thirds {
+    width: 66.66667%; } }
+
 /**
  * @section Typography
  * Sets font styles for entire site
@@ -966,7 +974,7 @@ select:focus {
 /*  Expand-and-Collapse styling for smaller screens.
  *  Remove if not using.
  *  Change max-width to fit your project. */
-@media (max-width: 40em) {
+@media (max-width: 60em) {
   /*  .js-astro prefix ensure content is only hidden when JavaScript is supported.
    *  This requires on the included js-accessibility.js-astro script. */
   /*  Align text to the left when javascript is supported */
@@ -1014,7 +1022,7 @@ select:focus {
 /*  Styling for Bigger Screens.
  *  (Astro is built mobile-first.)
  *  Change min-width to fit your project. */
-@media (min-width: 40em) {
+@media (min-width: 60em) {
   /*  Align text to the left */
   .nav-wrap {
     text-align: left; }
@@ -1142,7 +1150,7 @@ h1 {
     text-align: center; }
     @media (max-width: 60em) {
       h1.hero {
-        font-size: 2.25em; } }
+        display: none; } }
     h1.hero.shrink {
       font-size: 1vw; }
 
@@ -1206,6 +1214,9 @@ h3 {
   margin-bottom: 200px; }
   .main.shrink {
     color: #99FF99; }
+  @media (max-width: 60em) {
+    .main {
+      margin-top: 80px; } }
 
 /* 
  * NAV BAR
@@ -1229,3 +1240,7 @@ h3 {
   .nav-bar.scrolled {
     background-color: #808080;
     opacity: 0.9; }
+  @media (max-width: 60em) {
+    .nav-bar {
+      background-color: #808080;
+      opacity: 0.9; } }
