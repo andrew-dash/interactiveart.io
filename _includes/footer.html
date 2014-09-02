@@ -4,8 +4,13 @@
 		<script src="{{ site.url }}/js/classList.js"></script>
 		<script src="{{ site.url }}/js/bind-polyfill.js"></script>
 		<script src="{{ site.url }}/js/astro-plus.js"></script>
+		<script src="{{ site.url }}/js/smooth-scroll.js"></script>
 
 		<script>
+			smoothScroll.init({
+				offset: 80
+			});
+	
 			astro.init({
 				toggleActiveClass: 'active',
 				navActiveClass: 'active',
