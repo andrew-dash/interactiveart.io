@@ -33,7 +33,7 @@ var scrollHeader = (function() {
 
 })();
 
-var sections = $('section'),
+var sections = $('.post'),
 	nav = $('.nav-bar'),
 	nav_height = nav.outerHeight();
  

@@ -256,7 +256,7 @@ a:active {
 @media (min-width: 40em) {
   .grid-two-thirds {
     width: 100%; } }
-@media (min-width: 60em) {
+@media (min-width: 80em) {
   .grid-two-thirds {
     width: 66.66667%; } }
 
@@ -1167,7 +1167,7 @@ a.logo {
 
 .bar li a {
   color: #e5e5e5; }
-  .bar li a:hover {
+  .bar li a:hover, .bar li a.active {
     color: #FF99CC; }
 
 nav {
