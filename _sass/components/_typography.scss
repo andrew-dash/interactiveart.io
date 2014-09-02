@@ -62,7 +62,7 @@ p {
 
 a,
 a:visited {
-	color: $color-primary;
+	color: $color-white;
 	text-decoration: none;
 	word-wrap: break-word;
 }
@@ -70,7 +70,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: darken( $color-primary, 15% );
+	color: darken( $color-white, 12% );
 	text-decoration: none;
 }
 

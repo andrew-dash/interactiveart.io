@@ -11,16 +11,19 @@ pre {
 }
 
 code {
-	color: $color-code;
-	background-color: lighten( $light-grey, 7% );
+	color: $light-pink;
+	background-color: lighten( $color-black, 18% );
 	padding: calc-em(4px);
 }
 
 pre {
 	display: block;
 	margin-bottom: $spacing;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50em;
 	line-height: 1.5;
-	background-color: lighten( $light-grey, 6% );
+	background-color: lighten( $color-black, 18% );
 	padding: calc-em(13px);
 	tab-size: 4;
 	white-space: pre-wrap;
@@ -30,7 +33,7 @@ pre {
 pre code {
 	font-size: 1em;
 	padding: 0;
-	color: inherit;
+	color: $light-pink;
 	background-color: transparent;
 	border: 0;
 }
