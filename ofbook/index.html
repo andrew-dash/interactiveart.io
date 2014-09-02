@@ -1,0 +1,10 @@
+---
+title: ofBook
+layout: default
+---
+
+{% for chapter in site.ofbook %}
+
+	<a href="{{site.url}}{{chapter.url}}">{{ chapter.title }}</a>
+
+{% endfor %}
