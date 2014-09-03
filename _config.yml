@@ -15,5 +15,3 @@ sass:
     sass_dir: _sass
 
 highlighter: pygments
-
-encoding: UTF-8
