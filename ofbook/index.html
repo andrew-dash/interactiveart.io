@@ -3,8 +3,22 @@ title: ofBook
 layout: default
 ---
 
-{% for chapter in site.ofbook %}
+<section class="container">
 
-	<a href="{{site.url}}{{chapter.url}}">{{ chapter.title }}</a>
-
-{% endfor %}
+	{% include book-nav.html %}
+	<div class="grid-fourth" id="sticky-chapters">
+		<p><a class="goHome" href="{{site.url}}">{{ site.name }}</a></p>
+		<p><a data-scroll class="title" href="#title">ofBook</a></p>
+		{% for chapter in site.ofbook reversed%}
+			<p><a data-scroll href="#{{chapter.number}}">{{ chapter.title }}</a></p>
+		{% endfor %}
+	</div>
+	
+	<div class="grid-three-fourths offset-fourth">
+		{% for chapter in site.ofbook reversed%}
+			<section class="chapter" id="{{chapter.number}}">
+				{{ chapter.content }}
+			</section>
+		{% endfor %}
+	</div>
+</section>

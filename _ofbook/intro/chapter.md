@@ -3,6 +3,7 @@ title: intro
 path: intro
 collection: ofbook
 layout: chapter
+number: 1
 ---
 
 #intro

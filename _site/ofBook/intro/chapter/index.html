@@ -18,7 +18,7 @@
 		<!-- https://github.com/audreyr/favicon-cheat-sheet -->
 
 		<!-- Feature Test -->
-		<script src="http://interactiveart.io/js/detects.min.js"></script>
+		<script src="http://0.0.0.0:4000/js/detects.min.js"></script>
 
 		<!-- HTML5 Shim for IE 6-8 -->
 		<!--[if lt IE 9]>
@@ -26,7 +26,7 @@
 		<![endif]-->
 
 		<!-- stylesheet -->
-		<link rel="stylesheet" href="http://interactiveart.io/css/kraken.css" type="text/css">
+		<link rel="stylesheet" href="http://0.0.0.0:4000/css/kraken.css" type="text/css">
 
 	</head>
 
@@ -48,8 +48,16 @@
 	<h1 class="hero">ofBook</h1>
 
 </section>
+	<div class="grid-fourth" id="sticky-chapters">
+		
+			<p><a href="#1">intro</a></p>
+		
+			<p><a href="#2">C++ Basics</a></p>
+		
+	</div>
 	
-	<h1 id="intro">intro</h1>
+	<div class="grid-three-fourths offset-fourth">
+		<h1 id="intro">intro</h1>
 
 <h2 id="of-history">OF history</h2>
 
@@ -223,16 +231,16 @@ float position;
 <p>In addition to header search paths, there are also setting in the IDE for dealing with linker paths and libraries to link against.  A common error you might see is a link error, where the code in your project compiles fine, but it’s having trouble linking because some object is missing.  For example, if you forget to include a .cpp file from the source code, the other code will comiple fine, but when the linker goes to make that jump, it can’t find where to jump to.  Linker errors are described as “undefined reference” errors and occur at the end of the compile process. </p>
 
 
-
+	</div>
 </section>
 
 <!-- Javascript -->
-		<script src="http://interactiveart.io/js/jquery-2.1.1.min.js"></script>
-		<script src="http://interactiveart.io/js/main.js"></script>
-		<script src="http://interactiveart.io/js/classList.js"></script>
-		<script src="http://interactiveart.io/js/bind-polyfill.js"></script>
-		<script src="http://interactiveart.io/js/astro-plus.js"></script>
-		<script src="http://interactiveart.io/js/smooth-scroll.js"></script>
+		<script src="http://0.0.0.0:4000/js/jquery-2.1.1.min.js"></script>
+		<script src="http://0.0.0.0:4000/js/main.js"></script>
+		<script src="http://0.0.0.0:4000/js/classList.js"></script>
+		<script src="http://0.0.0.0:4000/js/bind-polyfill.js"></script>
+		<script src="http://0.0.0.0:4000/js/astro-plus.js"></script>
+		<script src="http://0.0.0.0:4000/js/smooth-scroll.js"></script>
 
 		<script>
 			smoothScroll.init({
