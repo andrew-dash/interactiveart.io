@@ -25,15 +25,15 @@ This chapter introduces you to writing small computer programs using the C++ lan
 
 I did most of my drawing and painting in the mid-nineties, a high school AP art student sporting a long black ponytail of hair shaved with a step, round eyeglasses, and never an article of clothing without spill, fling, smattering, or splotch of Liquitex Basics acrylic paint. Bored out of my mind in economics class, playing with my TI-82 graphing calculator, I discovered something that flipped a light bulb on in my heart. Unlike smaller calculators around my house growing up, the TI-82 had a thick instruction manual. Amidst sections in this manual about trig functions and other dry out-of-reach science, something caught my thirsty, young eye: a sexy black-on-white pyramid with smaller upside-down pyramids infinitely nested inside, shown in Figure 1.
 
-![Figure 1: TI-82 rendering of the Sierpinski triangle, Courtesy of Texas Instruments](/ofbook/images/sierpinski-fractal-ti82.png "Figure 1: TI-82 rendering of the Sierpinski triangle, Courtesy of Texas Instruments")
+![Figure 1: TI-82 rendering of the Sierpinski triangle, Courtesy of Texas Instruments](/media/images/sierpinski-fractal-ti82.png "Figure 1: TI-82 rendering of the Sierpinski triangle, Courtesy of Texas Instruments")
 
 This fractal, the famous [Sierpinski triangle](https://www.wolframalpha.com/input/?i=sierpinski+triangle), accompanied about twenty-five computer instructions making up the full SIERPINS program. I looked closer at the code, seeing a few numeric operations – nothing too advanced, and most of it was commanding words, like "do this", or "if something then do another thing". I was able to key in the code from the book into the graphing calculator and run the program. At first, just a blank LCD panel. Slowly a few random pixels switched to black here and there, not really showing any pattern. After a few more seconds, the scene filled in and I could already see faint outlines of triangles. After a good long time, my calculator finally matched the picture in the book. My mind was officially blown. Certain things did not make sense. What sort of miracle of nature caused such a complex form to come from so little instruction? The screen had over six thousand pixels in it, so why is it that a mere twenty-five instructions was all it took to create this amazing, organism-like artwork? Whose artwork was it? Might I derive a new work from it? Rarely had I ever seen such a magical reward coming from so little work. I had found my new basics. I felt the need to understand the program because (I decided) it was important. I went back into the code and changed some of the numbers, then ran the program again. The screen went blank, then drew a different picture, only this time, skewed to the left, falling out of the viewport. Feeling more courageous, I attempted to change one of the English instructions, and the machine showed an error, failing to run.
 
-![Figure 2: The human loop of a programmer.](/ofbook/images/programmer-cycle.png "Figure 2: The human loop of a programmer.")
+![Figure 2: The human loop of a programmer.](/media/images/programmer-cycle.png "Figure 2: The human loop of a programmer.")
 
 The cycle illustrated in Figure 2 is an infinitely repeating loop that I have had a great pleasure of executing for a couple decades and I still love what I do. Each new cycle never fails to surprise me. As I pursue what it means to create a program, and what it means to create software art, the process of iteratively evolving a list of computer instructions always presents as much logical challenge as it does artistic reward. Very few of those challenges have been impossible to solve, especially with other people available to collaborate and assist, or by splitting my puzzle into smaller puzzles. If you have already written code in another environment like Processing, Javascript, or even HTML with CSS, then this first important lesson might seem too obvious.
 
-![Figure 3: Don't get the wrong idea.](/ofbook/images/profit-not.png "Figure 3: Don't get the wrong idea.")
+![Figure 3: Don't get the wrong idea.](/media/images/profit-not.png "Figure 3: Don't get the wrong idea.")
 
 For those just now familiarizing themselves with what it means to write small programs, it is important to understand the iterative nature of the code writing process. The anecdote in Figure 3 shows what this process is *not*. Rarely would you ever enter some code into the editor just once, and expect to hit compile and see your finished outcome. It is natural, and commonly accepted for programs to start small, have plenty of mistakes (bugs), and evolve slowly toward a goal of desired outcome or behavior. In fact it is so commonplace that to make the former assumption is a downright programmer's mistake. Even in older days when programs were hand-written on paper, the author still needed to eyeball the code obsessively in order to work out the mistakes; therefore the process was iterative. In learning the C++ language, I will provide tiny code examples that you will be compiling on your machine. The abnormal part is typing the code from the book into the editor, and (provided your fingers do not slip) the program magically runs. I am deliberately removing the troubleshooting experience in order to isolate the subject matter of the C++ language itself. Later on, we will tackle the commonplace task of *debugging* (fixing errors) as a topic all its own.
 
@@ -43,15 +43,15 @@ Let us start by making the smallest, most immediate C++ program possible, then u
 
 You will notice right away that there is an editor already containing some code, but it may be set to another language. Let's switch the language to C++11 if it is not already in that mode. Down at the bottom left of the editor, press the button just to the left of "stdin", as shown in Figure 4. The label for this button could be any number of things.
 
-![Figure 4](/ofbook/images/where-is-says-java.png "Figure 4")
+![Figure 4](/media/images/where-is-says-java.png "Figure 4")
 
 A menu drops down with a list of programming languages. Please choose C++11, shown in Figure 5.
 
-![Figure 5](/ofbook/images/choose-c11.png "Figure 5")
+![Figure 5](/media/images/choose-c11.png "Figure 5")
 
 Notice that the code in the editor changed, and looks something like figure 6.
 
-![Figure 6](/ofbook/images/empty-template.png "Figure 6")
+![Figure 6](/media/images/empty-template.png "Figure 6")
 
 This is just an empty code template that does nothing, and creates no errors. The numbers in the left hand gutter indicate the line number of the code. Press the green button labeled *Run*. You will see a copy of the code,  "Success" in the comments, and the section labeled *stdin* (standard input) will be empty. *stdout* (standard output) will also be empty.
 
@@ -70,7 +70,7 @@ and this style encased in a block . . .
 
 Now please press *Edit* (Figure 7) at the top left of the code editor.
 
-![Figure 7](/ofbook/images/ideone-edit.png "Figure 7")
+![Figure 7](/media/images/ideone-edit.png "Figure 7")
 
 You will see a slightly different editing configuration but the same template code will still be editable at the top. We will now edit the code. Find line 5, where it says:
 
@@ -114,7 +114,7 @@ int main(){
 
 Now press the green *ideone it!* button at the bottom right corner and watch the output console, which is the bottom half of the code editor, just above that green button. You will see orange status messages saying things like “Waiting for compilation,” “Compilation,” and “Running”. Shortly after, the program will execute in the cloud and the standard output should show up on that web page. You should see the new message in Figure 8.
 
-![Figure 8](/ofbook/images/hello-world.png "Figure 8: Hello World appears in output window")
+![Figure 8](/media/images/hello-world.png "Figure 8: Hello World appears in output window")
 
 You made it this far. Now give yourself a pat on the back. You just wrote your first line of C++ code; you analyzed it, compiled it, ran it, and saw the output.
 
@@ -228,11 +228,11 @@ This is the first piece of code that has a beginning and an end, such that it "w
 
 In C++, we enclose groups of code statements inside functions, and each function can be seen as a little program inside the greater program, as in the simplified diagram in figure 9.
 
-![Figure 9: Many Functions](/ofbook/images/program-anatomy.png "Figure 9. A program contains many functions, and each function contains zero or more statements.")
+![Figure 9: Many Functions](/media/images/program-anatomy.png "Figure 9. A program contains many functions, and each function contains zero or more statements.")
 
 Each of these functions has a name by which we can call it. To call a function is to execute the code statements contained inside that function. The basic convenience in doing this is less typing, and we will talk about the other advantages later. Like a board game, a program has a starting position. More precisely, the program has an *entrypoint* expected by the compiler to be there. That entrypoint is a function called *main*. The code you write inside the *main* function is the first code that executes in your program, and therefore it is responsible for calling any other functions in your program. Who calls your *main* function? The operating system does! Let's break down the syntax of the main function in this demo. Again, for all you Processing coders, this is old news.
 
-![Figure 10: The Function](/ofbook/images/function-anatomy.png)
+![Figure 10: The Function](/media/images/function-anatomy.png)
 
 When defining a function, the first token is the advertised return type. Functions can optionally return a value, like an answer to a question, a solution to a problem, the result of a task, or the product of a process. In this case, *main* promises to return an `int`, or *integer* type, which is a whole number with no fraction or decimal component. Next token is the name of our function. The system expects the word "main" in all lower-case, but you will later define your own functions and we will get into naming. Next is an opening and closing parenthesis. Yes, it seems kind of strange to have it there, since there is nothing inside it. Later, we will see what goes in there — but never leave out the pair of parentheses with functions because in a certain way, that is the major hint to the human that it's a function. In fact, from now on, when I refer to a function by name, I'll suffix it with a ( ), for example `main()`.
 
@@ -293,7 +293,7 @@ int main(){
 
 Getting back to the previous example, those five lines of code are all ***function calls***. They are telling `greet()` to execute, and passing it the one string argument so it can do its job. That one string argument is made available to `greet()`'s inner code via the argument called `person`. To see the order of how things happen, take a look at Figure 11.
 
-![Figure 11. Function Call Flow](/ofbook/images/function-call.png "Figure 11. Function Call Flow")
+![Figure 11. Function Call Flow](/media/images/function-call.png "Figure 11. Function Call Flow")
 
 The colorful line in Figure 11 is the path drawn by an imaginary playback head that steps over the code as it executes. We start at the blue part and go in through the main entrypoint, then encounter `greet()`, which is where a *jump* happens. As the line turns green, it escapes out of `main()` temporarily so it can go follow along `greet()` for a while. About where the line turns yellow, you see it finished executing the containing code inside `greet()` and does a second jump (the return) this time going back to the previous saved place, where it continues to the next statement. The most obvious advantage we can see in this example is the reduction of complexity from that long `cout` statement to a simple call to `greet()`. If we must call `greet()` five times, having the routine *encapsulated* into a function gives it convenience power. Let's say you wanted to change the greeting from "Good night" to "Show's over ". Rather than updating all the lines of code you cut-and-pasted, you could just edit the one function, and all the uses of the function would change their behavior along with it, in a synchronized way. Furthermore, code can grow to be pretty complex. It helps to break it down into small routines, and use those routines as your own custom building blocks when thinking about how to build the greater software. By using functions, you are liberated from the need to meticulously represent every detail of your system; therefore a function is one kind of *abstraction* just like abstraction in art. This sort of abstraction is called *encapsulation of complexity* because it's like taking the big complex thing and putting it inside a nice little capsule, making that big complex thing seem smaller and simpler. It's a very powerful idea — not just in code.
 
@@ -301,11 +301,11 @@ The colorful line in Figure 11 is the path drawn by an imaginary playback head t
 
 Imagine actor Laurence Fishburne wearing tinted Pince-nez glasses, offering you two options that are pretty complicated to explain. On the one hand, he is willing to help you escape from the evil Matrix so that you may fulfill your destiny as the hacker hero, but it involves living life on life's terms and that is potentially painful but whatever. The story must go on and btw, there is a pretty girl. On the other hand, he is also willing to let you forget this all happened, and mysteriously plant you back in your tiny apartment where you can go on living a lie, none the wiser. These two options are explained in the movie *The Matrix* and then the main character is offered the choice in the form of colored pills, as a way to simplify an otherwise wordy film scenario. The two complex choices are encapsulated into a simple analogy that is much easier for movie audiences to swallow. See Figure 12.
 
-![Figure 12. Red Pill and Blue Pill from The Matrix](/ofbook/images/red-blue-pills.png "Figure 12. Red Pill and Blue Pill from The Matrix")
+![Figure 12. Red Pill and Blue Pill from The Matrix](/media/images/red-blue-pills.png "Figure 12. Red Pill and Blue Pill from The Matrix")
 
 Rather than repeating back the entire complicated situation, Neo (the main character) needed only to swallow one of the pills. Even if it were real medicine, the idea of encapsulating complexity still applies. Most of us do not have the expertise to practice medicine in the most effective way, and so we trust physicians and pharmacologists to create just the right blend of just the right herbs and chemicals. When you swallow a pill, it is like calling that function because you have the advantage of not needing to understand the depths of the pill. You simply trust that the pill will cause an outcome. The same is true with code. Most of the time, a function was written by someone else, and if that person is a good developer, you are free to remain blissfully ignorant of their function's inner workings as long as you grasp how to properly call their function. In this way, you are the *higher-level* coder, meaning that you simply call the function but you did not write it. Someone who creates a project in OpenFrameworks is sitting on the shoulders of the OpenFrameworks layer. OpenFrameworks sits on the shoulders of the OpenGL Utility Toolkit, which sits on OpenGL itself, and so on. In other words, an OpenFrameworks project is a *higher-level* application of C++, a language with a reputation for *lower-level* programming. As illustrated in Figure 13, I sometimes run into a problem when I tell people I wrote an interactive piece in C++.
 
-![Figure 13. Standing on Shoulders of Giants](/ofbook/images/shoulders-of-giants.png "Figure 13. Standing on Shoulders of Giants")
+![Figure 13. Standing on Shoulders of Giants](/media/images/shoulders-of-giants.png "Figure 13. Standing on Shoulders of Giants")
 
 There are a few advantages to using C++ over the other options (mostly scripting) for your new media project. The discussion can get quite religious (read: heated) among those who know the details. If you seek to learn C++, then usually it is because you seek faster runtime performance, because C++ has more libraries that you can snap in to your project, or because your mentor is working in that language. An OF project is considered higher-level because it is working with a greater encapsulation of complexity, and that is something to be proud of.
 
@@ -359,7 +359,7 @@ int main(){
 
 Now that I am using the variable `answer`, I only need to change that one number in my code, and it will show up in all three sentences as 42. That can be more elegant than find-and-replace. Figure 18 shows the syntax explanation for declaring and initializing a variable on the same line.
 
-![Figure 18. Variable declaration and initialization](/ofbook/images/variable-declaration.png "Figure 18. Variable declaration and initialization")
+![Figure 18. Variable declaration and initialization](/media/images/variable-declaration.png "Figure 18. Variable declaration and initialization")
 
 It is also possible to declare a variable and initialize it on two separate lines. That would look like:
 
@@ -431,7 +431,7 @@ More obsessively, programmers may sometimes use what is affectionately nicknamed
 
 We call them variables because their values *vary* during runtime. They are most useful as a bucket where we put something (let's say water) for safe keeping. As that usually goes, we end up going back to the bucket and using some of the water, or mixing a chemical into the water, or topping up the bucket with more water, etc. A variable is like an empty bucket where you can put your stuff. Figure 19 shows a bucket from the game *Minecraft*.
 
-![Figure 19. Bucket, courtesy of Mojang AB](/ofbook/images/minecraft-bucket.png "Figure 19. Bucket, courtesy of Mojang AB")
+![Figure 19. Bucket, courtesy of Mojang AB](/media/images/minecraft-bucket.png "Figure 19. Bucket, courtesy of Mojang AB")
 
 If a computer program is like a little brain, then a variable is like a basic unit of remembrance. Jotting down a small note in my sketchbook is like storing a value into a variable for later use. Let's see an example of a variable changing its value.
 
@@ -458,7 +458,7 @@ int main(){
 
 The output should be `012345`. Notice the use of the equal sign. It is different than what we are accustomed to from arithmetic. In the traditional context, a single equal sign means the expressions on both sides would evaluate to the same value. In C, that is actually a double equal (==) and we will talk about it later. A single equal sign means "Solve the expression on the right side and store the answer into the variable named on the left side". It takes some getting used to if you haven't programmed before. If I were a beginning coder (as my inner child is perpetually), I would perhaps enjoy some alternative syntax to command the computer to store a value into a variable. Something along the lines of: `3 => counter` as found in the language *ChucK* by Princeton sound lab, or perhaps something a bit more visual, as my repurposing of the Minecraft crafting table in figure 20.
 
-![Figure 20. Minecraft crafting table repurposed for variable assignment](/ofbook/images/minechuck.png "Figure 20. Minecraft crafting table repurposed for variable assignment")
+![Figure 20. Minecraft crafting table repurposed for variable assignment](/media/images/minechuck.png "Figure 20. Minecraft crafting table repurposed for variable assignment")
 
 The usefulness of having the variable name on the left side rather than the right becomes apparent in practice since the expressions get get quite lengthy! Beginning a line with `varname =` ends up being easier for the eyeball to scan because it's guaranteed to be two symbols long before starting in on whatever madness you plan on typing after the equals sign.
 
@@ -487,11 +487,11 @@ int main(){
 
 The output should still be `012345`. By saying `counter = counter + 1`, I am incrementing `counter` by 1. More specifically, I am using `counter` in the right-hand "addition" expression, and the result of that (one moment later) gets stored into `counter`. This seems a bit funny because it talks about `counter` during two different times. It reminds me of the movie series, *Back to the Future*, in which Marty McFly runs into past and future versions of himself. See Figure 21.
 
-![Figure 21. The future Marty uses the past Marty](/ofbook/images/futuremarty.png "Figure 21. The future Marty uses the past Marty")
+![Figure 21. The future Marty uses the past Marty](/media/images/futuremarty.png "Figure 21. The future Marty uses the past Marty")
 
 Great Scott, that could make someone dizzy! But after doing it a few times, you'll see it doesn't get much more complicated than what you see there. This is a highly *practical* use of science fiction, and you probably aren't attempting to challenge the fabric of spacetime (unless you are Kyle McDonald, or maybe a Haskell coder <!-- i mean these things as a high compliment, not as mockery -->). The point here is to modify the contents of computer memory, so we have `counter` from one instruction ago, in the same way that there might already be water in our bucket when we go to add water to it. Figure 22 shows `bucket = bucket + water`.
 
-![Figure 22. bucket = bucket + water](/ofbook/images/minecraft-inc.png "Figure 22. bucket = bucket + water")
+![Figure 22. bucket = bucket + water](/media/images/minecraft-inc.png "Figure 22. bucket = bucket + water")
 
 Incrementing by one, or adding some value to a variable is in fact so commonplace in all programming that there is even syntactic sugar for it. *Syntactic Sugar* is a redundant grammar added to a programming language for reasons of convenience. It helps reduce typing, can increase comprehension or expressiveness, and (like sugar) makes the programmer happier. The following statements all add 1 to `counter`.
 
@@ -603,7 +603,7 @@ let alone the 100+ page book it grew to be. If you're serious about getting into
 OpenFrameworks, I highly recommend you stop and read the unabridged version of this
 chapter before continuing in ofBook, so that you may understand what you are reading.
 You will find those materials at
-https://github.com/openframeworks/ofBook/tree/master/02_cplusplus_basics/unabridged.md
+https://github.com/openframeworks/media/tree/master/02_cplusplus_basics/unabridged.md
 
 ##PS.
 
