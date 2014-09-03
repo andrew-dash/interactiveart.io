@@ -6,7 +6,7 @@ url: "http://interactiveart.io"
 collections:
   ofbook:
     output: true
-    permalink: /ofBook/:path/
+    permalink: /:path/
 
 post_defaults:
   layout: post
