@@ -2,7 +2,7 @@
 title: intro
 path: intro
 collection: ofbook
-layout: default
+layout: chapter
 number: 1
 ---
 
