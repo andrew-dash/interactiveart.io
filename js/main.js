@@ -34,7 +34,9 @@ var scrollHeader = (function() {
 })();
 
 var sections = $('.post'),
+	chapters = $('.chapter'),
 	nav = $('.nav-bar'),
+	sticky = $('#sticky-chapters'),
 	nav_height = nav.outerHeight();
  
 $(window).on('scroll', function () {
@@ -50,6 +52,19 @@ $(window).on('scroll', function () {
  
         $(this).addClass('active');
         nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+      }
+    });
+
+  chapters.each(function() {
+    var top = $(this).offset().top,
+        bottom = top + $(this).outerHeight();
+ 
+      if (cur_pos >= top && cur_pos <= bottom) {
+        sticky.find('a').removeClass('active');
+        chapters.removeClass('active');
+ 		
+        $(this).addClass('active');
+        sticky.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
       }
     });
   });
