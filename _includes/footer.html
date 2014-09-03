@@ -5,6 +5,7 @@
 		<script src="{{ site.url }}/js/bind-polyfill.js"></script>
 		<script src="{{ site.url }}/js/astro-plus.js"></script>
 		<script src="{{ site.url }}/js/smooth-scroll.js"></script>
+		<script src="{{ site.url }}/js/houdini.js"></script>
 
 		<script>
 			smoothScroll.init({
@@ -18,6 +19,16 @@
 				callbackBefore: function () {},
 				callbackAfter: function () {}
 			});
+
+			houdini.init();
+			// houdini.init({
+			// 	toggleActiveClass: 'active',
+			// 	contentActiveClass: 'active',
+			// 	initClass: 'js-houdini',
+			// 	callbackBefore: function () {},
+			// 	callbackAfter: function () {}
+			// });
+
 		</script>
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) -->
