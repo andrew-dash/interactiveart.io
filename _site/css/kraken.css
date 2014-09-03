@@ -1218,6 +1218,22 @@ h3 {
     .main {
       margin-top: 80px; } }
 
+a.inline {
+  color: #FF99CC; }
+  a.inline:hover {
+    color: #ffa3d1; }
+
+p > img {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.title {
+  color: #99FF99; }
+
+.goHome {
+  border-bottom: 1px solid #e5e5e5; }
+
 /* 
  * NAV BAR
  *
@@ -1244,3 +1260,11 @@ h3 {
     .nav-bar {
       background-color: #808080;
       opacity: 0.9; } }
+
+#sticky-chapters {
+  position: fixed;
+  top: 6em; }
+  #sticky-chapters p {
+    margin: 0; }
+  #sticky-chapters a.active {
+    color: #FF99CC; }

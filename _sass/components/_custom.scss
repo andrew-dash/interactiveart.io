@@ -105,3 +105,22 @@ h3{
 		margin-top: 80px;
 	}
 }
+
+a.inline{
+	color: $light-pink;
+	&:hover{
+		color: lighten($light-pink, 2%);
+	}
+}
+
+p > img{
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+.title{
+	color: $color-primary;
+}
+.goHome{
+	border-bottom: 1px solid $light-grey;
+}
