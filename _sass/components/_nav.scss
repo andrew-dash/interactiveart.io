@@ -22,3 +22,14 @@
 		opacity: 0.9;
 	}
 }
+
+#sticky-chapters{
+	position: fixed;
+	top: 6em;
+	p{
+		margin: 0;
+	}
+	a.active{
+		color: $light-pink;
+	}
+}
