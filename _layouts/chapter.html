@@ -5,7 +5,13 @@ layout: default
 <section class="container">
 
 	{% include navigation.html %}
+	<div class="grid-fourth" id="sticky-chapters">
+		{% for chapter in site.ofbook reversed%}
+			<p><a href="#{{chapter.number}}">{{ chapter.title }}</a></p>
+		{% endfor %}
+	</div>
 	
-	{{ content }}
-
+	<div class="grid-three-fourths offset-fourth">
+		{{ content }}
+	</div>
 </section>
