@@ -2,7 +2,7 @@
 title: C++ Basics
 path: cplusplusbasics
 collection: ofbook
-layout: chapter
+layout: default
 number: 2
 ---
 
