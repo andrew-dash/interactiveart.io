@@ -13,14 +13,14 @@
 
 /*  When expanded, hide "show" text.
  *  When collapsed, hide "hide" text. */
-.active .collapse-text-show,
+.vis .collapse-text-show,
 .collapse-text-hide {
 	display: none;
 	visibility: hidden;
 }
 
 /*  When expanded, show "hide" text. */
-.active .collapse-text-hide {
+.vis .collapse-text-hide {
 	display: inline;
 	visibility: visible;
 }
@@ -34,10 +34,10 @@
 	transition: opacity 0.35s ease;
 }
 
-/*  When collapsed element has the .active class, show it
+/*  When collapsed element has the .vis class, show it
  *  Uses max-height instead of display: none to allow for
  *  CSS3 animations, which don't work on display values. */
-.js-houdini .collapse.active {
+.js-houdini .collapse.vis {
 	max-height: 9999em;
 	opacity: 1;
 }
