@@ -1,0 +1,115 @@
+
+
+
+    Subject: The Death of Computer Art
+
+    Format: ASCII
+    Average Reading Time: 4 min. 29 sec.
+    Signal to Noise Ratio:  unknown
+    Rating: adult
+    Genre: provocation
+
+
+            After reading with great interest recent discussions about this yearÕs ISEA 
+    and Ars Electronica I wanted to offer the following thoughts (partly, as a way 
+    to compensate myself for not being able to go to either event this year). 
+
+            Lots of people talk about the coming convergence of computers, 
+    communication and television. This convergence will probably happen. In 
+    fact, judging from the new models of personal computers which are clearly 
+    being positioned as consumer electronic devices (incorporating answering 
+    machine and TV cards in them), it is indeed well underway. 
+
+            Those of us who work with digital art often debate another convergence -
+    - the convergence between art world and computer art world. I recently came 
+    to the conclusion that this particular convergence will NOT happen. Below 
+    are the reasons why. 
+
+            (In the following, I will refer to art world -- galleries, major museums, 
+    prestigious art journals -- as Duchamp-land, in analogy with Disneyland. I 
+    will also refer to the world of computer arts, as exemplified by ISEA, Ars 
+    Electronica, SIGGRAPH art shows, etc. as Turing-land). 
+
+            The typical object which is admitted in Duchamp-land (i.e., counted as 
+    contemporary art) meets the following characteristics:
+            1) Oriented towards the "content." Or, as they say in Hollywood, "its the 
+    content, stupid." The content may mean beauty (although towards the end of 
+    the century the arts have, by and large, delegated the function of providing 
+    beauty for society to MTV and fashion); "metaphors about human condition"; 
+    transgressing accepted cultural norms, etc. 
+            3) "Complicated." This characteristic requires a further sociological and 
+    semiotic analysis, but here we can just say that it refers to the evocation of a 
+    multitude of cultural codes requiring to read the object as well as a particular, 
+    "post-modern" ironic attitude. 
+            2) Ironic,  self-referential,  and often literally destructive attitude towards 
+    its material, i.e., its technology, be it canvas, glass, motors, electronics, etc. The 
+    examples are the awareness -- which has largely shaped artistic modernism -- 
+    of the tension between the illusion and the flatness of the canvas; ironic 
+    machines by Duchamp; self-destructive machines by Tinguely. Perhaps the 
+    best and most relevant example is the first exhibition of Paik where he 
+    screwed technology --  ripping open television sets or changing TV signals by 
+    affixing magnets to the monitors. 
+
+            Let us now look at Turing-land. As we will see, Turing-land is 
+    characterized by directly opposing characteristics:
+            1) Orientation towards new, state-of-the-art computer technology, rather 
+    than "content." In the 1960s and 1970s it was exploration of algorithms and 
+    cybernetics, later it was computer graphics, few years ago it was CD-ROM and 
+    "interactivity" (which is a highly problematic concept because all modern 
+    human-computer interfaces are interactive, i.e. a modern computer is an 
+    interactive device by definition, so the word does not say anything more than 
+    simply that an artwork is using a computer); now it is WWW and "memes"; 
+    next year it maybe DVD (digital video disk) or super-high bandwidth 
+    networks or something else. In short, Turing-land functions as a place in 
+    society where the people from the worlds of culture and art play with latest 
+    computer technologies. Sociologically, this is exemplified by the historically 
+    changing categories of exhibitions such as Ars Electronica and ISEA: the 
+    category of "computer graphics" has been dropped in favor of a new category 
+    of "WWW art," etc.
+            2) "Simple" and usually lacking irony. See below. 
+            3) Most important, objects in Turing-land take technology which they use 
+    always seriously. (This is one important difference between current computer 
+    art and art and technology movement of the 1960s.) In that, computer art 
+    functions exactly like computer industry. How often do you see computer 
+    artists seriously confronting and foregrounding the basic nature of computer 
+    technology -- that computers always crash; that computer programs run out of 
+    memory; that half of the links on the WWW lead nowhere, since nobody 
+    cleans up this gigantic dumping site of information site known as "World 
+    Wide Web"; that a typical VR user spends her or his time being lirerally lost 
+    rather than being engaged in "meaningful" interaction with a virtual world; 
+    etc. In short, our civilization is rushing to ground itself in a technology which 
+    can only be described as highly unreliable, transient, and incomplete. When 
+    computers don't work at a computer art show, the artists and the audience 
+    always treat this fact with horror, although they are present at an industry 
+    demo -- as opposed to taking this to be a wonderful Dada-like accident.   
+            Perhaps only the artists from post-communist societies are ready to 
+    recognize that in an information society the noise is as meaningful as the 
+    signal, and that the nature of technology is that it does not work as it 
+    supposed to. As an example, consider the project (which I already mentioned 
+    in my previous post) presented by Russian conceptual poet Dmitry Prigov 
+    during ISEA '94. He used a business translation program to translate a famous 
+    19th century Russian poem from Russian into Finish, then from Finish into 
+    English, and then from English back into Russian (I may have gotten the 
+    details wrong but that should not matter). He then declared the mistakes 
+    made by computer program (which, designed to deal with business prose, was 
+    not very kind to Russian poetry) as his new work of art. Thus, the noise 
+    became the signal. (Significantly, this is something which Shannon's 
+    mathematical theory of communication, which forms the intellectual 
+    backbone of the information society, has recognized half a century ago). 
+            But let us return to the battle between Duchamp-land and Turing-land. 
+    Shall I conclude from my analysis that now, as Duchamp-land has finally 
+    discovered computers and begun to use them with its usual irony and 
+    sophistication, gatherings such as ISEA and Ars Electronica should simply be 
+    abolished? Probably not. These gatherings do play an important function of 
+    being a buffer zone, an interface where the world of culture at large and the 
+    world of computer culture meet each other.  Sometimes we even see artists 
+    genuinely pushing the boundaries of new media aesthetics, i.e. going beyond 
+    what is already accomplished by flight simulators, new computer games with 
+    their AI engines, MIT Media Lab projects, etc. In short, on occasion artists are 
+    able to compete with computer researchers, rather than simply creating new 
+    demos for commercial software, thus functioning as "memes" for computer 
+    industry. 
+             What we should not expect from Turing-land is art which will be 
+    accepted in Duchamp-land. Duchamp-land wants art, not research into new 
+    aesthetic possibilities of new media. The convergence will not happen.    
+
