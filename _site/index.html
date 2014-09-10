@@ -418,6 +418,138 @@ ofEndShape();
 	read Chapter 1 in <a href="http://0.0.0.0:4000/media/pdfs/dourish-paul--where-the-action-is.pdf">Where the Action Is: The Foundations of Embodied Interaction</a>
 </p>
 
+<h3 class="text-muted">Demo from class</h3>
+
+<pre><code>/*
+*
+* interactive art &amp; creative coding
+* cool ofSketch class demo
+* Week 3
+*
+*/
+
+int width;
+int height;
+
+// variable declaration
+int x;
+int myVariable;
+int speed;
+int increment;
+int add;
+
+// colors for balloon
+int r;
+int g;
+int b;
+
+ofImage myBoySteve;
+
+int steveIsWide;
+int steveIsTall;
+
+void setup() {
+    
+    add = 1;
+    
+    myBoySteve.loadImage("steve_rattner.jpg");
+    
+    x = 250;
+    speed = 60;
+    increment = 0;
+    ofSetCircleResolution(100);
+	ofSetWindowShape(800, 800);
+	ofEnableAlphaBlending();
+	
+	ofBackground(255,0,80);
+	
+	ofSetFrameRate(speed);
+	
+	ofSetWindowTitle("Look at my Balloon!");
+	
+	width = ofGetWindowWidth();
+	height = ofGetWindowHeight();
+	
+	// generate a random starting color for the balloon
+	r = ofRandom(127,255);
+	g = ofRandom(127,255);
+	b = ofRandom(127,255);
+	
+	ofSetBackgroundAuto(true);
+}
+
+void draw() {
+    
+    steveIsWide = myBoySteve.getWidth();
+    steveIsTall = myBoySteve.getHeight();
+    
+    myBoySteve.draw(0, mouseY, steveIsWide/4, steveIsTall/4);
+    
+    // check to see if the text went off screen
+	if (increment &gt; width){
+	    //ofLogNotice("steve width") &lt;&lt; myBoySteve.getWidth();
+	    add = -7;
+	   
+	} else if ( increment &lt; 0 ) {
+	    add = 4;
+	    //ofLogNotice("set add to ") &lt;&lt; add;
+	}
+	
+	// draw mountains using a function
+	myCoolThing(increment, increment/2);	
+	
+	ofFill();
+	// drawing a square purple cloud
+	ofSetColor(0,0,255,100);
+	ofRect(50,50,600,600);
+	
+	// drawing a vertical line for my balloon string
+	ofSetColor(0,255,0);
+	ofLine(mouseX, 100, mouseX, 400);
+	
+	// now i have a balloon!
+	ofSetColor(r,g,b);
+	ofEllipse(mouseX,140,100,120);
+	
+	// move text across the screen
+	increment += add;
+	ofSetColor(255);
+	ofDrawBitmapString("This is my cool balloon", increment, mouseY);
+	
+	for( int i = 0; i &lt; width; i += 10 ){
+	    ofLine(i, 0, i, height);
+	    //ofLogNotice("the value of i ") &lt;&lt; i;
+	}	
+}
+
+void myCoolThing(int thisthing, int thatThing) {
+    // pseudo mountains
+	ofNoFill();
+	ofSetColor(0,255,0);
+	ofTriangle(thisthing, 800, 200, 600, thisthing, 800);
+	ofTriangle(100, 800, thatThing, 600, thatThing, 800);
+	ofTriangle(thatThing, 800, 600, thisthing, 800, thisthing);
+}
+
+// use key presses to generate new balloon colors
+void keyPressed(int key)
+{
+    if('r' == key) {
+    	// generate a random red value
+    	r = ofRandom(127,255);
+   	} else if('g' == key) {
+    	// generate a random red value
+    	g = ofRandom(127,255);
+   	} else if('b' == key) {
+    	// generate a random red value
+    	b = ofRandom(127,255);
+   	} else if(' ' == key)
+    {
+        ofToggleFullscreen();
+    }
+}
+</code></pre>
+
 			</div>
 		</section>
 
