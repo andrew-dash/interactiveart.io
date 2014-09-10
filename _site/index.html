@@ -100,9 +100,9 @@
 <section class="container main">
 
 	<div class="row">
-		<!-- <div class="grid-full">
-			<h2 class="bq text-muted">just a touch of code</h2>
-		</div> --> 
+		<div class="grid-full">
+			<h2 class="bq text-muted">The idea becomes a machine that makes the art. -Sol Le Wit</h2>
+		</div> 
 		
 
 		<section class="container post" id="overview">
@@ -379,6 +379,44 @@ void keyPressed(int key)
 			<div class="grid-two-thirds float-center">
 				<h2 class="next">3</h2>
 					<h3 class="text-muted">continuing with ofSketch</h3>
+
+<p>We’ll look at injecting some logic into our sketches this week. Starting with if statements and for loops and ending by implementing classes. </p>
+
+<p><a href="http://www.slideshare.net/roxlu/openframeworks-007-graphics?ref=http://openframeworks.cc/tutorials/first%20steps/004_presentations.html" target="_blank" class="inline">Basic graphics in OF</a></p>
+
+<h3 class="text-muted">more OF functions</h3>
+
+<p>Normally OF redraws the background on every frame. Unlike Processing you need to run <code>ofSetBackgroundAuto(false);</code> to stop the background from redrawing.</p>
+
+<p>Using images is easy and takes just three steps. First declare your image instance above setup() using ofImage (don’t forget to import your image into your sketch!). Next, in setup() load your image using loadImage(). Finally, in draw() draw your image.</p>
+
+<pre><code>ofImage somePhoto;
+
+void setup(){
+	somePhoto.loadImage('nameOfImage.jpg');
+}
+
+void draw(){
+	somePhoto.draw(x, y, width, height);
+}
+</code></pre>
+
+<p>Drawing complex shapes is easy</p>
+
+<pre><code>ofFill();
+ 
+ofBeginShape(); // start drawing shape
+    ofVertex( x, y );
+    ofVertex( x, y );
+    ofVertex( x, y );
+    ofVertex( x, y );
+ofEndShape();
+</code></pre>
+
+<h3 class="text-muted">assignment</h3>
+<p class="links">
+	read Chapter 1 in <a href="http://0.0.0.0:4000/media/pdfs/dourish-paul--where-the-action-is.pdf">Where the Action Is: The Foundations of Embodied Interaction</a>
+</p>
 
 			</div>
 		</section>
