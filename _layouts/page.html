@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+{% include navigation.html %}
+
+{{ content }}
