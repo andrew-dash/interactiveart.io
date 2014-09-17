@@ -569,8 +569,6 @@ void keyPressed(int key)
 
 <p><a href="http://www.creativeapplications.net/openframeworks/sharing-faces-seeing-yourself-reflected-in-the-image-of-others/">Look! This is cool!</a></p>
 
-<h3 class="text-muted">demo from class</h3>
-
 			</div>
 		</section>
 
@@ -588,6 +586,78 @@ void keyPressed(int key)
 <p>read <a href="http://interactiveart.io/media/pdfs/programming_interactivity_chapter_2.pdf" class="inline" target="_blank">chapter 2</a> and <a href="http://interactiveart.io/media/pdfs/programming_interactivity_chapter_5.pdf" class="inline" target="_blank">chapter 5</a> from Programming Interactivity</p>
 
 <p>continue working!</p>
+
+<h3 class="text-muted">demo from class</h3>
+
+<p>myRocketShip</p>
+
+<pre><code>#include "Rocket.h"
+
+int numRockets;
+
+vector&lt;Rocket&gt; eachRocket;
+
+void setup() {
+    numRockets = 42;
+    
+	ofSetWindowShape(600, 600);
+	ofBackground(0);
+	
+	for ( int i = 0; i &lt; numRockets; i++ ) {
+	    Rocket r = Rocket(ofRandom(100,300), ofRandom(500), 100, ofRandom(100,255), ofRandom(0,200) );
+	    eachRocket.push_back(r);
+	}
+}
+
+void update(){
+    for ( int i = 0; i &lt; numRockets; i++ ) {
+        eachRocket[i].moveRocket();
+    }
+}
+
+void draw() {
+    for ( int i = 0; i &lt; numRockets; i++ ) {
+        eachRocket[i].drawMyRocket();
+    }
+}
+</code></pre>
+
+<p>Rocket . h</p>
+
+<pre><code>class Rocket{
+
+public:
+
+    float x;
+    float y;
+    int size;
+    int r;
+    int b;
+    
+    Rocket(){};
+    
+	Rocket(float passedX, float passedY, int passedSize, int passedR, int passedB){
+        x = passedX;
+        y = passedY;
+        size = passedSize;
+        r = passedR;
+        b = passedB;
+	}
+	
+	void moveRocket(){
+	    x += ofRandom(-1, 1);
+	    y += ofRandom(-1, 1);
+	}
+	
+	void drawMyRocket(){
+	    ofSetColor(r,10,b);
+	    ofRect(x, y, size, size/2);
+	    
+	}
+
+};
+</code></pre>
+
 
 			</div>
 		</section>
