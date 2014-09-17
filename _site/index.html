@@ -591,9 +591,9 @@ void keyPressed(int key)
 
 <p>myRocketShip</p>
 
-<pre><code>#include "Rocket.h"
+<h1 id="include-rocketh">include “Rocket.h”</h1>
 
-int numRockets;
+<pre><code>int numRockets;
 
 vector&lt;Rocket&gt; eachRocket;
 
@@ -604,7 +604,8 @@ void setup() {
 	ofBackground(0);
 	
 	for ( int i = 0; i &lt; numRockets; i++ ) {
-	    Rocket r = Rocket(ofRandom(100,300), ofRandom(500), 100, ofRandom(100,255), ofRandom(0,200) );
+	    float speed = ofRandom(-1, 1);
+	    Rocket r = Rocket(-100, (ofGetWindowHeight() / 2 ), 100, ofRandom(100,255), ofRandom(0,200), speed );
 	    eachRocket.push_back(r);
 	}
 }
@@ -633,20 +634,34 @@ public:
     int size;
     int r;
     int b;
+    int speedX;
+    float speedY;
     
     Rocket(){};
     
-	Rocket(float passedX, float passedY, int passedSize, int passedR, int passedB){
+    
+    
+	Rocket(float passedX, float passedY, int passedSize, int passedR, int passedB, float tspeedY){
         x = passedX;
         y = passedY;
         size = passedSize;
         r = passedR;
         b = passedB;
+        
+        speedY = tspeedY;
 	}
 	
 	void moveRocket(){
+	    speedX = 1;
+    
 	    x += ofRandom(-1, 1);
-	    y += ofRandom(-1, 1);
+	    
+	    x += speedX;
+	    y += speedY;
+	    
+	    if ( x &gt; ofGetWindowWidth() ) {
+	        x = -100;
+	    }
 	}
 	
 	void drawMyRocket(){
@@ -657,7 +672,6 @@ public:
 
 };
 </code></pre>
-
 
 			</div>
 		</section>
