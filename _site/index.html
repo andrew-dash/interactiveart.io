@@ -871,6 +871,32 @@ public:
 };
 </code></pre>
 
+<h3 class="text-muted">3D Grid!!</h3>
+
+<pre><code>ofEasyCam cam;
+
+void setup() {
+	ofSetWindowShape(1000,1000);
+	ofBackground(120,120,120);
+	
+	ofEnableDepthTest();
+	cam.setDistance(100);
+}
+
+void draw() {
+    cam.begin();
+	ofSetColor(0);
+	for(int z = 0; z &gt; -100; z -= 20){
+	    for(int x = 0; x &lt; 400; x += 20){
+	        for(int y = 0; y &lt; 400; y += 20){
+	            ofDrawSphere(x, y, z, 1);
+	        }
+	    }
+	}
+	cam.end();
+}
+</code></pre>
+
 
 			</div>
 		</section>
