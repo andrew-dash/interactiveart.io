@@ -696,6 +696,65 @@ public:
 
 <h3 class="text-muted">demo from class</h3>
 
+<p>blackHole.cpp</p>
+
+<pre><code>#include "Matter.h"
+
+vector&lt;Matter&gt; myMatter;
+int matterCounter;
+
+void setup() {
+	
+	ofEnableAlphaBlending();
+	ofSetWindowShape(1000,1000);
+	ofBackground(0,0,0);
+	matterCounter = 0;
+}
+
+void draw() {
+	
+	for( int i = 0; i &lt; matterCounter; i++) {
+	    myMatter[i].draw();
+	}
+}
+
+void keyPressed(int key)
+{
+    if(' ' == key)
+    {
+        myMatter.push_back( Matter() );
+        matterCounter++;
+    } else if ( 'a' == key) {
+        for( int i = 0; i &lt; matterCounter; i++) {
+    	    myMatter[i].location.set( ofRandom(ofGetWindowWidth()), ofRandom(ofGetWindowHeight()) );
+    	}
+    }
+}
+</code></pre>
+
+<p>Matter.h</p>
+
+<pre><code>class Matter{
+
+public:
+
+    ofVec2f location;
+
+	Matter(){
+        location.set( ofRandom(ofGetWindowWidth()), ofRandom(ofGetWindowHeight()) );
+	}	
+	
+	void draw(){
+	  
+	    ofSetColor(255,255,255,127);
+	    ofFill();
+	    ofEllipse(location.x, location.y, 60, 60);
+	}
+	
+};
+</code></pre>
+
+
 			</div>
 		</section>
 
