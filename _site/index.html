@@ -754,6 +754,123 @@ public:
 };
 </code></pre>
 
+<h3 class="text-muted">demo with acceleration</h3>
+
+<p>blackHole.cpp</p>
+
+<pre><code>#include "Matter.h"
+
+vector&lt;Matter&gt; myMatter;
+int matterCounter;
+
+void setup() {
+	ofEnableAlphaBlending();
+	ofSetWindowShape(1000,1000);
+	ofBackground(0,0,0);
+	matterCounter = 400;
+	
+	for( int i = 0; i &lt; matterCounter; i++) {
+	    Matter m = Matter();
+	    myMatter.push_back( m );
+	}
+}
+
+void update(){
+    for( int i = 0; i &lt; matterCounter; i++) {
+	    myMatter[i].screenCheck();
+	    myMatter[i].move();
+	}
+	
+}
+
+void draw() {
+	for( int i = 0; i &lt; matterCounter; i++) {
+	    myMatter[i].draw();
+	}
+}
+
+void keyPressed(int key)
+{
+    if(' ' == key)
+    {
+       myMatter.push_back( Matter() );
+       matterCounter++;
+       
+    } else if ( 'a' == key) {
+        for( int i = 0; i &lt; matterCounter; i++) {
+    	    myMatter[i].location.set( ofRandom(ofGetWindowWidth()), ofRandom(ofGetWindowHeight()) );
+    	    myMatter[i].color.set(0, 255, 0);
+    	}
+    }
+}
+</code></pre>
+
+<p>Matter.h</p>
+
+<pre><code>class Matter{
+
+public:
+
+    ofVec2f location;
+    ofVec2f velocity;
+    ofVec2f acceleration;
+    ofVec2f mouse;
+    ofVec3f color;
+    float topSpeed;
+
+	Matter(){
+        location.set( ofRandom(ofGetWindowWidth()), ofRandom(ofGetWindowHeight()) );
+        velocity.set( 0.3, 0.3 );
+        topSpeed = 10;
+        if ( location.x &lt; (ofGetWindowWidth()/2) ) {
+            color.set(ofRandom(150,255), 0, 0);
+        } else {
+            color.set(0, 0, ofRandom(150,255));
+        }
+	}
+	
+	void move(){
+	    
+	    float x = ofGetMouseX();
+	    float y = ofGetMouseY();
+	    
+	    mouse.set(x, y);
+	    
+	    acceleration = mouse - location;
+        
+	    acceleration.normalize();
+	    
+	    acceleration *= 0.2;
+	    velocity.limit(topSpeed);
+	    
+	    velocity += acceleration;
+	    
+	    location += velocity;
+	}
+	
+	void draw(){
+	    ofSetColor(color.x, color.y, color.z,127);
+	    ofFill();
+	    ofEllipse(location.x, location.y,20, 20);
+	}
+	
+	void screenCheck(){
+	    if ( location.x &gt; ofGetWindowWidth() ) {
+	        location.x = 0;
+	    } else if ( location.x &lt; 0 ) {
+	        location.x = ofGetWindowWidth();
+	    }
+	    
+	    if ( location.y &gt; ofGetWindowHeight() ) {
+	        location.y = 0;
+	    } else if ( location.y &lt; 0 ) {
+	        location.y = ofGetWindowHeight();
+	    }
+	}
+	
+};
+</code></pre>
+
 
 			</div>
 		</section>
