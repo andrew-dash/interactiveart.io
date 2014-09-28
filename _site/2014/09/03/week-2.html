@@ -1,10 +1,10 @@
 <h3 class="text-muted">ofSketch</h3>
 <p>
-	This week is all about getting up and running with <a class="inline" href="https://github.com/olab-io/ofSketch">ofSketch</a>. Make sure you have <a class="inline" href="http://itunes.apple.com/us/app/xcode/id497799835?ls=1&amp;mt=12">Xcode</a> installed to ensure ofSketch will run properly. We will be referencing <a class="inline" href="https://github.com/openframeworks/ofBook" target="_blank">ofBook</a> at times -- you can easily find relevant chapters <a class="inline" href="http://interactiveart.io/ofbook" target="_blank">here</a>. The <a class="inline" href="http://forum.openframeworks.cc" target="_blank">openFrameworks forum</a> is a great resource for posting questions or looking for answers. Check out the <a class="inline" href="http://talk.olab.io" target="_blank">oLab forum</a> for similar assistance or more SAIC related content. 
+	This week is all about getting up and running with <a class="inline" href="https://github.com/olab-io/ofSketch">ofSketch</a>. Make sure you have <a class="inline" href="http://itunes.apple.com/us/app/xcode/id497799835?ls=1&amp;mt=12">Xcode</a> installed to ensure ofSketch will run properly. We will be referencing <a class="inline" href="https://github.com/openframeworks/ofBook" target="_blank">ofBook</a> at times -- you can easily find relevant chapters <a class="inline" href="http://0.0.0.0:4000/ofbook" target="_blank">here</a>. The <a class="inline" href="http://forum.openframeworks.cc" target="_blank">openFrameworks forum</a> is a great resource for posting questions or looking for answers. Check out the <a class="inline" href="http://talk.olab.io" target="_blank">oLab forum</a> for similar assistance or more SAIC related content. 
 </p>
 
 <div class="collapse" id="show-me">
-	<img src="http://interactiveart.io/media/eighthGrade.jpg" />
+	<img src="http://0.0.0.0:4000/media/eighthGrade.jpg" />
 </div>
 
 <p>
@@ -28,154 +28,13 @@
 </p>
 <h3 class="text-muted">assignment</h3>
 <p class="links">
-	read <a href="http://interactiveart.io/media/pdfs/electric_speed.pdf">electric speed</a>
+	read <a href="http://0.0.0.0:4000/media/pdfs/electric_speed.pdf">electric speed</a>
 </p>
 <p>Work on your ofSketch exercises. Spend a few hours experimenting with the environment. Build on what we covered in class. Use the <a class="inline" href="http://openframeworks.cc/documentation/" target="_blank">openFrameworks documentation</a> to discover some things this platform has to offer. Or if you're familiar with processing <a class="inline" href="http://kylemcdonald.net/forof/processing-vs-of.html" target="_blank">this resource</a> could be very helpful. Your exercise for this assignment can be one sketch or multiple test-sketches.</p>
 
 <h3 class="text-muted">getting started with openFrameworks</h3>
 <p>just a few useful functions</p>
-<pre>
-	<code>
-		ofSetWindowShape(width, height);
-		ofSetCircleResolution(size);
-		ofBackground(r,g,b);
-		ofSetWindowTitle("graphics example");
-
-		ofSetFrameRate(framerate);
-
-		ofEnableAlphaBlending();
-		ofSetColor(r,g,b,a); 
-
-		image.loadImage("image.png");
-
-		// shapes
-		ofFill(); // draw "filled shapes"
-		ofStroke(r,g,b);
-
-		ofCircle(x,y,radius);
-		ofEllipse(x,y,width,height);
-		ofRect(x1,y1,x2,y2);
-		ofTriangle(x1,y1,x2,y2,x3,y3);
-
-
-
-		//text
-		ofDrawBitmapString("some text", x,y);
-
-
-		ofRandom(min,max);
-
-
-		void keyPressed(int key)
-		{
-		    if('a' == key) {
-		    	// do something
-		   	}
-		   	else if(' ' == key)
-		    {
-		        ofToggleFullscreen();
-		    }
-		}
-
-		ofLogNotice("mousePressed()") &lt;&lt; x;
-</code>
-</pre>
+<div data-gist-id="b7bf353df4b2c17d63ac"></div>
 
 <h3 class="text-muted">example from class</h3>
-<pre>
-	<code>
-/*
-*
-* interactive art &amp; creative coding
-* ofSketch class demo
-* Week 2
-*
-*/
-
-// variable declaration
-int x;
-int myVariable;
-int speed;
-int increment;
-
-// colors for balloon
-int r;
-int g;
-int b;
-
-void setup() {
-    
-    x = 250;
-    speed = 60;
-    increment = 0;
-    ofSetCircleResolution(100);
-	ofSetWindowShape(800, 800);
-	ofEnableAlphaBlending();
-	
-	ofBackground(255,0,80);
-	
-	ofSetFrameRate(speed);
-	
-	ofSetWindowTitle("Look at my Balloon!");
-	
-	// generate a random starting color for the balloon
-	r = ofRandom(127,255);
-	g = ofRandom(127,255);
-	b = ofRandom(127,255);
-}
-
-void draw() {
-    
-    // check to see if the text went off screen
-	if (increment &gt; ofGetWindowWidth() ){
-	    increment = 0;
-	}
-	// pseudo mountains
-	ofNoFill();
-	ofSetColor(0,255,0);
-	ofTriangle(0, 800, 200, 600, 400, 800);
-	ofTriangle(100, 800, 300, 600, 500, 800);
-	ofTriangle(400, 800, 600, 600, 800, 800);
-	
-	
-	ofFill();
-	
-	// drawing a square purple cloud
-	ofSetColor(0,0,255,100);
-	ofRect(50,50,600,600);
-	
-	// drawing a vertical line for my balloon string
-	ofSetColor(0,255,0);
-	ofLine(mouseX, 100, mouseX, 400);
-	
-	// now i have a balloon!
-	ofSetColor(r,g,b);
-	ofEllipse(mouseX,140,100,120);
-	
-	// move text across the screen
-	increment++;
-	ofSetColor(255);
-	ofDrawBitmapString("This is my cool balloon", increment, mouseY);
-	
-// 	ofLogNotice("This is a random color") &lt;&lt; thisColor;
-}
-
-// use key presses to generate new balloon colors
-void keyPressed(int key)
-{
-    if('r' == key) {
-    	// generate a random red value
-    	r = ofRandom(127,255);
-   	} else if('g' == key) {
-    	// generate a random red value
-    	g = ofRandom(127,255);
-   	} else if('b' == key) {
-    	// generate a random red value
-    	b = ofRandom(127,255);
-   	} else if(' ' == key)
-    {
-        ofToggleFullscreen();
-    }
-}
-</code>
-</pre>
+<div data-gist-id="1980e17adcded527872e"></div>

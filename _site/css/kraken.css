@@ -434,12 +434,10 @@ sub {
  * Highlighting colors
  */
 ::selection {
-  color: #ffffff;
-  background: #99FF99; }
+  background: #e5e5e5; }
 
 ::-moz-selection {
-  color: #ffffff;
-  background: #99FF99; }
+  background: #e5e5e5; }
 
 /**
  * Blockquotes
@@ -468,12 +466,11 @@ q:after {
 code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 0.75em;
   font-weight: light;
   border-radius: 0.0725em; }
 
 code {
-  color: #99FF99;
+  color: #e5e5e5;
   background-color: #646464;
   padding: 0.25em; }
 
@@ -493,7 +490,7 @@ pre {
 pre code {
   font-size: 1em;
   padding: 0;
-  color: #99FF99;
+  color: #e5e5e5;
   background-color: transparent;
   border: 0; }
 
@@ -507,8 +504,8 @@ pre code {
   padding: 0.5em 0.6875em;
   line-height: 1.2;
   font-weight: normal;
-  background-color: #99FF99;
-  border: 0.0725em solid #99FF99;
+  background-color: #e5e5e5;
+  border: 0.0725em solid #e5e5e5;
   border-radius: 0.0725em;
   margin-right: 0.3125em;
   margin-bottom: 0.3125em; }
@@ -532,8 +529,8 @@ a .btn:focus,
 .btn:active,
 a .btn:active,
 .btn.active {
-  background-color: #4dff4d;
-  border-color: #4dff4d;
+  background-color: #bfbfbf;
+  border-color: #bfbfbf;
   text-decoration: none; }
 
 .btn-secondary {
@@ -1053,7 +1050,7 @@ select:focus {
 
 .bg-secondary {
   color: #ffffff;
-  background-color: #99FF99; }
+  background-color: #e5e5e5; }
 
 .bg-condensed {
   padding-top: 0.9375em;
@@ -1214,7 +1211,7 @@ h3 {
 .main {
   margin-bottom: 200px; }
   .main.shrink {
-    color: #99FF99; }
+    color: #e5e5e5; }
   @media (max-width: 60em) {
     .main {
       margin-top: 80px; } }
@@ -1230,7 +1227,7 @@ p > img {
   margin-right: auto; }
 
 .title {
-  color: #99FF99; }
+  color: #e5e5e5; }
 
 .goHome {
   border-bottom: 1px solid #e5e5e5; }
