@@ -2,6 +2,7 @@ name: "interactiveart.io"
 description: "course site for interactive art & creative coding"
 
 url: "http://interactiveart.io"
+#url: "http://0.0.0.0:4000"
 
 collections:
   ofbook:
