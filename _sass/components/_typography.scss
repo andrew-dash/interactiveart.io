@@ -223,12 +223,12 @@ sub {
  * Highlighting colors
  */
 ::selection {
-	color: $color-white;
+	// color: $color-white;
 	background: $color-primary;
 }
 
 ::-moz-selection {
-	color: $color-white;
+	// color: $color-white;
 	background: $color-primary;
 }
 
