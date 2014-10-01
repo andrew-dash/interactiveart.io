@@ -126,7 +126,7 @@ p > img{
 }
 
 .b{
-	@media (min-width: $bp-medium) { 
+	@media (min-width: $bp-small) { 
 		display: block;
 	}
 	@media (max-width: $bp-xlarge) { 

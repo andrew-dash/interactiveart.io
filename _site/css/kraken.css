@@ -1232,7 +1232,7 @@ p > img {
 .goHome {
   border-bottom: 1px solid #e5e5e5; }
 
-@media (min-width: 40em) {
+@media (min-width: 30em) {
   .b {
     display: block; } }
 @media (max-width: 80em) {
