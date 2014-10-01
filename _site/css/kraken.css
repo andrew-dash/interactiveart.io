@@ -1239,10 +1239,10 @@ p > img {
   .b {
     display: none; } }
 
-@media (min-width: 40em) {
+@media (min-width: 30em) {
   .s {
     display: none; } }
-@media (min-width: 20em) {
+@media (max-width: 80em) {
   .s {
     display: block; } }
 

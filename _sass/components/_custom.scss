@@ -134,10 +134,10 @@ p > img{
 	}
 }
 .s{
-	@media (min-width: $bp-medium) { 
+	@media (min-width: $bp-small) { 
 		display: none;
 	}
-	@media (min-width: $bp-xsmall) { 
+	@media (max-width: $bp-xlarge) { 
 		display: block;
 	}
 }
