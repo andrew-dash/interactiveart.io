@@ -134,7 +134,7 @@ p > img{
 	}
 }
 .s{
-	@media (max-width: $bp-medium) { 
+	@media (min-width: $bp-medium) { 
 		display: none;
 	}
 	@media (min-width: $bp-xsmall) { 
