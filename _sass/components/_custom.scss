@@ -124,3 +124,16 @@ p > img{
 .goHome{
 	border-bottom: 1px solid $light-grey;
 }
+
+.big{
+	display: block;
+	@media (max-width: $bp-medium) { 
+		display: none;
+	}
+}
+.small{
+	display: none;
+	@media (max-width: $bp-medium) { 
+		display: block;
+	}
+}

@@ -1232,6 +1232,18 @@ p > img {
 .goHome {
   border-bottom: 1px solid #e5e5e5; }
 
+.big {
+  display: block; }
+  @media (max-width: 40em) {
+    .big {
+      display: none; } }
+
+.small {
+  display: none; }
+  @media (max-width: 40em) {
+    .small {
+      display: block; } }
+
 /* 
  * NAV BAR
  *
