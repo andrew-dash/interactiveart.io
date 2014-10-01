@@ -125,15 +125,19 @@ p > img{
 	border-bottom: 1px solid $light-grey;
 }
 
-.big{
-	display: block;
-	@media (max-width: $bp-medium) { 
+.b{
+	@media (min-width: $bp-medium) { 
+		display: block;
+	}
+	@media (max-width: $bp-xlarge) { 
 		display: none;
 	}
 }
-.small{
-	display: none;
+.s{
 	@media (max-width: $bp-medium) { 
+		display: none;
+	}
+	@media (min-width: $bp-xsmall) { 
 		display: block;
 	}
 }
