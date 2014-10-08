@@ -8,9 +8,18 @@
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,700,300);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,700italic);
+
+html{
+	text-rendering: optimizeLegibility;
+}
+
 body{
 	background-color: $dark-grey;
 	color: $light-grey;
+}
+html, body{
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
 }
 
 intro{}
