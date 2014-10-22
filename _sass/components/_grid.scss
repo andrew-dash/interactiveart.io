@@ -31,6 +31,10 @@
 	}
 }
 
+.grid-img {
+	@extend %grid-base;
+}
+
 
 /**
  * Reverses order of grid for content choreography
@@ -69,14 +73,8 @@
 	@media (min-width: $bp-medium)  { width: 25%; }
 }
 
-/* Add clearfix */
+// Add clearfix
 .container,
 .row {
 	@extend .group;
-}
-
-/* OVERRIDE */
-.grid-two-thirds{
-	@media (min-width: $bp-medium)  { width: 100%; }
-	@media (min-width: $bp-xlarge)  { width: 66.66667%; }
 }
